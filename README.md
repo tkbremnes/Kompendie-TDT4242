@@ -14,3 +14,6 @@ Ingen
 ## Gjenstår å gjøre
 * Alle kapitler
 * Build-skript som samler alle kapitler og bygger .mobi, .epub, .pdf (via LaTeX)og HTML.
+
+* 3.2
+* 8.2
