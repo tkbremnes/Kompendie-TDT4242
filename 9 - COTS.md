@@ -1,0 +1,279 @@
+# COTS-testing
+
+Ofte brukte tilnærminger til testing av COTS:
+
+* Component meta-data
+* Retro-components (retrospector)
+* Built-in test (BIT)
+* STECC strategy
+* COTS
+
+
+## Component meta-data
+
+Meta-data
+: Data relatert til komponenter, *men er ikke kode*.
+
+Typer meta-data er for eksempel:
+
+* Tilstandsdiagrammer
+* Quality of Service-informasjon
+* Pseudokode og algoritmer
+* Test-logger
+	* Hva har blitt testet?
+* Bruks-mønstre
+	* Hvordan har komponenten blitt brukt til nå?
+
+Meta-data kan ta fryktelig mye plass, og er derfor en integrert, dog *lagret separat*, del av komponenten som helhet. Meta-data lastes ned/inn ved nødvendighet. Integrert i komponenten, men separat fra funksjonalitet.
+
+
+Hva kan en så bruke disse meta-dataene til i denne sammenhengen?
+
+* _Round trip path test_ basert på tilstandsdiagrammer
+* En kan skape _funksjonelle tester_ basert på algoritmer og pseudo-kode.
+* Test-logger kan skape et grunnlag for _relevansevurdering_ av tester.
+
+
+## Retro-component
+
+Retrospector
+: Et verkøty som registrerer testing og utføringshistorien til en komponent. Denne informasjonen lagres som [meta-data](#componentmeta-data).
+
+Retro-component
+: Programvare med en retrospector.
+
+
+### Bruk av retrospectors
+Gjennom å samle informasjon om bruk har vi et bredere grunnlag for å kunne fjerne feil, samt teste programvare. For brukere av COTS-komponenter vil retrospectors fi verdifull informasjon om _hvordan komponentene ble testet_ og _hvordan komponenter har blitt brukt av andre_. Sistnevnte vil si oss noe om hvorvidt komponenten blir brukt på nye måter, noe som fører med seg en større risiko.
+
+
+
+## Built-In Test
+
+Nøkkeord:
+
+* Run-Time Testability
+
+
+Her trenger en to sett med tester:
+
+* I komponenten vil en teste at (test-) miljøet oppfører seg som foreskrevet.
+* I komponentens klienter vil en teste at komponenten implementerer de semantikker som klienter har blitt utviklet for å forvente.
+
+### Testing av komponenter
+Når en vil teste komponenter gjør en det ved å utføre følgende to steg:
+
+1. Bring komponenten til testens starttilstand.
+2. Kjør testen.
+3. Kontrollere at
+	* resultater er som forventet, og
+	* slutt-tilstand er som forventet.
+
+
+En må liste opp _starttilstand_, _forutsetning_ hvor det er hensiktsmessig, _hendelse_ og _sluttilstand_. Under er et eksempel for en enkel girkasse.
+
+<table>
+	<tr>
+		<td></td>
+		<td><strong>Starttilstand</strong></td>
+		<td><strong>Forutsetning</strong></td>
+		<td><strong>Hendelse</strong></td>
+		<td><strong>Sluttilstand</strong></td>
+	<tr>
+		<td>1</td>
+		<td>Neutral</td>
+		<td>[momentum < ReverseMomentum]</td>
+		<td><code>toReverse()</code></td>
+		<td>Reverse</td>
+	<tr>
+		<td>2</td>
+		<td>Reverse</td>
+		<td></td>
+		<td><code>toNeutral()</code></td>
+		<td>Neutral</td>
+	<tr>
+		<td>3</td>
+		<td>Neutral</td>
+		<td>[momentum < Gear1Momentum]</td>
+		<td><code>toGear1()</code></td>
+		<td>Gear1</td>
+	<tr>
+		<td>4</td>
+		<td>Gear1</td>
+		<td></td>
+		<td><code>toNeutral()</code></td>
+		<td>Neutral</td>
+	<tr>
+		<td>5</td>
+		<td>...</td>
+		<td>...</td>
+		<td>...</td>
+		<td>...</td>
+</table>
+
+
+### Valg av tester å utføre
+Ved valg av tester er det særlig to punkter en må vurdere: _testenes kvalitet_ og _testenes størrelse_. Dessverre er det ikke mulig å være best i alt – dess mer komprensiv test du har dess "bedre" er testen, men dess mer komprehensiv test dess større er den. Det samme gjelder testens størrelse. Her ønsker en at testen skal være rask å utføre, noe som legger sterkt press på å holde størrelsen nede. Løsningen på dette er å ha flere forskjellige testbatteri som utføres på ulike tidspunkt.
+
+### BIT-arktitektur
+BIT-ariktikturen består av følgende arktektur:
+
+* Komponenten
+	* Med et eller flere grensesnitt og implementasjoner av funksjonalitet
+* BIT-RTT
+	* Gir støtte for testingen
+* Eksterne tester
+	* Kjører de nødvendige testene
+* Håndterer (handler)
+	* Tar seg av feil, exceptions, fail-safe-oppførsel og lignende
+* Konstruktør (contstructor)
+	* Initialiserer komponenter, slik som eksempelvis håndtereren og eksterne testere.
+
+
+### Ulemper ved bruk av BIT
+BIT er av en _statisk natur_, en kjører én eller flere _forhåndsdefinerte_ tester flere ganger, og når en test er definert som vellykket vil komponenten være friskmeldt, og testen være over. Videre vil en generelt ikke kunne være helt sikker på at de tester som utføres er de som er krevd av komponenters faktiske klienter og brukere. Dessuten har komponent-tilbyder _antakelser_ om brukerens krav, noe som kan være både feil og/eller unøyaktig.
+
+
+
+## Self Testing COTS Components (STECC)
+STECC har mye til felles med [BIT](#built-intest), dog med de hovedforskjeller at der hvor BIT er av en statisk natur vil STECC dynamisk generere nye tester basert på beskrivelser. STECC vil også kunne interagere med testeren.
+
+En testgenerator vil generere tester, og være det leddet som kommuniserer med server for utveksling av metadata. Testgenerator vil kunne kommunisere til (?) testeren, samt sende spørringer [et sted].
+
+Mer informasjon finnes (trolig) på: <http://www.irma-international.org/viewtitle/30753/>.
+
+
+
+## Assessing COTS
+Når en vurderer kandidatkomponenter for testing, må utviklere spørre seg selv følgende tre spørsmål for hver definerte scenario:
+
+1. Oppfyller komponenten de behov _utvikler_ har?
+2. Er komponentens _kvalitet_ god nok?
+3. Hvilken innvirkning vil komponenten ha på _systemet_?
+
+
+
+## Black box-test-reduksjon ved bruk av input-output-analyse
+Tilfeldig testing er aldri komplett.
+For å utføre komplett funksjonell testing kan en redusere antall test-caser ved hjelp av input-output-analyse. Relasjoner mellom input og output kan en identifisere ved bruk av _statisk analyse_ eller ved _kjøre analyse_ (execution analysis) av programmet.
+
+Det en ønsker å avdekke er hvilke inndata som påvirker hvilke utdata, for så å kunne finne den minimale mengden forskjellig testdata for å holde størrelsen nede (og hastighet oppe). Etter analysen kan en utføre black box-testing basert på de data som har blitt funnet.
+
+
+
+
+
+# Outsourcing, subcontracting and COTS
+
+## Ansvar
+Det er utviklers hele og fulle ansvar for at det produktet som leveres er av en gitt kvalitet. Det er videre kun mulig å få godtgjørelse fra et selskap om en kan bevise kontraktbrudd fra leverandør sin side. Det er derfor viktig å kunne bygge opp tillit ved å teste tilstrekkelig. Dette er selvfølgelig svært viktig ved bruk av COTS.
+
+
+## Testing og tillit
+En test har ulike roller i de ulike fasene av utviklingen. I selve utviklingen og produksjonen av kode er det viktig for en test å kunne avdekke feil og mangler ved denne koden. I akseptansefasen, er det viktig for en test å kunne bygge tillit til programvarens komponenter. Ved bruk av COTS er det spesielt viktig å bygge opp denne tilliten.
+
+Tillit og troverdighet er noe som må _defineres_ eksplisitt. System og mijø må óg defineres. Tillit er relatert til _produkt_ (eks. en COTS-komponent), _prosess_ (_hvordan_ komponenten ble utviklet og testet ) og _mennesker_ (_hvem_ som utviklet og testet komponenten). Dette er et eksempel på et produkttillits-mønster.
+
+Det samme gjelder tillit til prosessen. For å bygge denne tilliten er det viktig å sikre at prosessen sporbar, og prosessen og benyttes korrekt, metoden som benyttes svarer til problemet som skal løses, samt at utviklerteamet er kompetent. Dette er et eksempel på et prosesstillits-mønster.
+
+
+
+## Testing og outsourcing
+Dersom utvikling outsources må testing være en integrert del av utviklingsprosessen. Testing er dermed kontraktrelatert. Dersom en skal benytte tillitsmønstre må en derfor inkludere krav til komponent (hva), personells kompetanse (hvem) og prosessen (hvordan).
+
+
+### Outsouring-krav
+En kontrakt som brukes ved outsourcing bør inkludere:
+
+* Krav til personell. En behøver å se CVer til hver av utviklerne.
+* Krav til utviklingsprosessen, inkludert testing. Dette kan komme av egen revisjon av prosessen, eller av standardiserte sertifikater som f. eks. ISO 9001.
+
+
+Der er videre viktig å kunne se og inspisere en rekke viktige artefakter:
+
+* Prosjektplanen
+	* Når skal hva gjøres?
+* Teststrategi
+	* Når skal testing av våre krav til komponenten testes?
+* Testplan
+	* Hvordan vil tester kjøres?
+* Testlogg
+	* Hva vil testene resultere i?
+
+
+Tilliten vi vil ha til komponenter vil være avhengig av hvor tilfredse vi er med svarene på disse spørsmålene. Tillit kan imidlertid bero på vår tidligere erfaring med selskapet. Generelt vil kontraktens rigiditet på dette feltet være avhengig av denne tidligere erfaringen.
+
+
+## Testing av COTS
+Testing av COTS skjer gjerne ved bruk av black box-testing eller domain partition testing. Anekdotiske bevis eksisterer som sier at en drar mest nytte av å fokusere på tester for _intern_ og _ekstern robusthet_. Hva en behøver for å teste disse typene robusthet, samt viktigheten av de varierer med typen komponent.
+
+Intern robusthet
+: Komponentens evne til å håndtere feil i komponenter eller miljø. For å teste dette behøver en wrappere, feilinjeksjon, m.m. Intern robusthet vil være viktigst i de komponenter som kun er synlige inne i systemets grenser.
+
+Ekster robusthet
+: Komponentens evne til å håndtere feil i inndata. Her behøver en kun komponenten "as is". Ekstern robusthet er viktig hvor komponenten er en del av brukergrensesnittet.
+
+
+### Testing av intern robusthet
+Intern robusthet dreier seg om en komponents evne til å håndtere alle feilaktige situasjoner som f. eks. minnefeil og feilende funksjonskall. En ønsker at koden i slike tilfeller vil gå til et definert, trygt, stadie eter å ha gitt en feilmelding. Informasjonstapet etter et slikt tilfelle skal og være minimalt.
+
+#### Wrapper
+
+Wrapper
+: En implementasjon som definerer den funksjonaliteten vi ønsker tilgang til. Dette kan, men behøver ikke, være et objekt.
+: "Wrapper"-klassen tilbyr et objektgrensesnitt samt metoder som håndterer impementasjonen. Istedet for å kalle på en metode i implementasjonen direkte, kaller klienten metoden via wrapperen som videre aksesserer implementasjonen.
+
+Bruk av en wrapper er nødvendig for å oppnå en rekke ønskede effekter.
+
+* Kontroll av komponentens input, selv om komponenten er satt inn i et realistisk system.
+* Kunne samle og rapportere alle inn- og utdata fra komponenten.
+* Vi kan manipulere exception handling, samt påvirke kun den ene komponenten alene.
+
+
+#### _Fault_-injeksjon
+En _fault_ er en abnomal kondisjon eller defekt som i tur kan forårsake en _failure_. _Fault_-injeksjon involverer det å forsettelig legge inn feil i programvaren for å fremprovososere en respons. _Fault_-injeksjon involverer to steg.
+
+Først vil en identifisere det settet _faults_ som kan oppsåt i en applikasjon, en modul, klasse eller metode. Det er med sandre ord ingen poeng i injisere nettverksfeil i programvare som ikke bruker nettverkskommunikasjon. En injiserer så slike feil i programvaren for å evaluere hvordan disse håndteres. En ønsker å kartlegge om applikasjonen detekterer feil, hvorvidt feilen isoleres og om applikasjonen overlever?
+
+// TODO: Fylle ut litt mer her
+
+
+### Testing av ekstern robusthet
+Feilhåndtering må testes for å kontrollere at:
+
+* Feil i inndata gir en feilmelding.
+* Feilmeldingen er lett forståelig for de intenderte sluttbrukerne.
+* Applikasjonen skal kunne fortsette etter feilen med et minimum tap av informasjon.
+* Applikasjonen skal gå til en _definert_ tilstand ved feil.
+
+
+#### Feilmeldinger
+En bruker skal ha all den informasjonen som behøves for å kunne korrigere feil i inndata, samt fortsette arbeidet fra nåværende tilstand. Dette krever innsikt i brukeren og brukerens behov. Dette testes ved å få en bruker til å arbeide med en realistisk oppgave, for så å skape en feil. Ved å observere brukeren og brukerens reaksjon vil en kunne se hvorvidt der er noen assistanse i feilmeldingen.
+
+
+
+
+## Sekvensiell testing
+For å kunne utføre sekvensiell testing trenger en en rekke variabler.
+
+* Target failure rate p1
+* Uakseptabel failure rate p2, hvor p2>p1
+* Akseptabel sannsynlighet for a gjøre en type I eller type II beslutningsfeil – og disse to verdiene brukes for å kalkulere a og b hvor 
+	* `a ≈ ln(   β   / (1-α) )`
+	* `b ≈ ln( (β-1) /   α   )`
+
+WHOA DUDE! Dette ble plutselig veldig matematisk!
+
+### Oppsummering
+Ved testing av programvare (`p<10^-3`) vil den sekvensielle testmetoden behøver et stort antall tester og bør derfor kun brukes for å teste robusthet basert på tilfeldig genenererte inndata. Ved inspeksjon av dokumenter (`p<10^-1`) vil metoden gi verdifull informasjon selv når en inspiserer et rimelig antall dokumenter.
+
+
+## Enkle Bayesiske metoder
+Bayesisk statistikk benyttes for å kombinere de tre faktorene: _testresultater_; _kontrakturelle forpliktelser_; og _tidligere erfaring med leverandør_.
+
+Bayes' teorem
+: `P(B|A) ∝ P(A|B) P(B)`
+
+For å estimere `B` vil vi bruke sannsynligheten av våre observasjoner som `P(A)`, og bruke `P(B)` som modell på vår tidligere kunnskap.
+
+\\ TODO: senere. Mye senere.
