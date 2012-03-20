@@ -9,9 +9,14 @@ fileList.each do |filename|
 
 	file = File.new(fname, "r")
 	prevLine = ""
+	prevDef = ""
 	file.each do |line|
 		if line[0] == 58
-			defList += prevLine + line + "\n\n"
+			if not prevLine[0] == 58
+				defList += prevLine + line
+			else
+				defList += line
+			end
 		end
 		prevLine = line
 	end

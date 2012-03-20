@@ -8,6 +8,13 @@ Kompendiets kapitler er nummerert etter forelesningsnummer. Benyttet syntaks er 
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
 
+## For å bygge
+Installere pandoc
+
+Installere Ruby
+
+Kjøre `ruby build.rb`
+
 ## Ferdige kapitler
 Ingen
 
