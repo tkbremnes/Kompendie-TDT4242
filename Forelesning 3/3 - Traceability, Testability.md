@@ -253,3 +253,131 @@ Der eksisterer flere automatiserte tilnærmingerfor sporing av krav. Da de ulike
 
 
 # Kravsspesifikasjon og testing
+
+
+
+
+Testability
+: The capability of the software product to enable modified software to be validated. (ISO 9126)
+
+
+
+Testabilitet tar for seg to hovedområder: hvor enkelt det er å teste en gitt implementasjon; og hvor *test-vennlig* et gitt krav er. Disse to problemer er ikke uavhengige av hverandre og må alltid sees på sammen.
+
+
+## Testabilitet
+
+For å kunne være testbart må et gitt krav være definert på en konkret måte. "When the ACC system is turned on, the "Active" lighet on the dashboard shall be turned on." er et eksempel på et krav som er tilstrekkelig definert. Dette i motsetning til "The system shall be easy to use" som må endres for å gjøres testbart.
+
+Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *test-eksekvering* (inkluderer black, white og grey box-testing); gjennom å *gjøre eksperimenter* og *kodeinspeksjon*.
+
+![Konkrete krav fra høynivå-mål](img/1.png)
+
+
+## Utfordringer
+
+Problemer relatert til:
+Volumet til testene som skal utføres (responstid, lagringskapasitet)
+Typen hendelse som skal testes (feilhåndtering, sikkerhetsmekanismer)
+Systemets tilstand før det skal testes (uvanlig feiltilstand, en gitt transaksjonshistorikk)
+
+
+
+
+### Design by Objective
+- Tom Gilb
+
+Der er imidlertid to problemer med denne metoden. For det første kan testene som metoden resulterer i være svært ekstensive, og dermed dyre. For det andre krever metoden tilgang til systemets sluttbrukere.
+
+
+(tekst på slide 11)
+1. What do you mean by <requirement>? This eill give us either (a) a testable requirement or (b) a set of testable and non-testable sub-requirements.
+2. In case (a) we are finished. In case (b) we will repeat question 1 for each non-testable sub-requirements.
+
+
+Der kan oppstå problemer knyttet til definering av systemets tilstander. Dersom et krav sier at et flys *reverse thrust* skal kunne reverseres *kun når flyet har landet*, er det et definisjonsspørsmål for hva som defineres som *landet*. Dette blant annet på grunn av de ulike sensorer som skal rapportere dette.
+
+I flyeksemplet kan et svar på dette være er at et fly har landet når en gitt vekt hviler på landingshjulene. Dette kan imidlertid være problematisk når flyet skal lande i motvind, og dermed genererer ekstra oppdrift, slik at flyet ikke vil kunne *lande* etter de definisjonen.
+
+
+Først og fremst må kunden vite nøyaktig *hva* han vil og *hvorfor* han vil ha det. Det er ofte mye enklere å teste om kundens oppnår sine mål med applikasjonen enn det er å teste at et system oppfyller et gitt krav. *Hvorfor* er dog sjeldent en del av en kravsspesifikasjon.
+
+
+
+
+### Krav til testbarhet
+En rekke andre krav ligger til grunn for en god kravsspesifikasjon. Et krav må være:
+
+
+#### Korrekt
+Uten feil.
+
+
+#### Komplett
+Må dekke alle situasjoner, "dersom X så..." og "dersom Y så...". Må også dette de tilfeller hvor X og Y ikke inntreffer.
+
+#### Konsistent
+Et krav kan ikke være i konflikt med andre krav. Dette kan være en utfordring da vi da trenger en komplett oversikt over alle krav. Vi kan dog i de fleste tilfeller klare oss med å kontrollere alle krav som er relatert til samme hendelse, funksjon eller parameter.
+
+#### Tydelig
+Konsepter av viktighet her er diagramnotasjon, beskrivelsesspråk og detaljnivå. Dette må tilpasses til den som er ment å lese dokumentene, det være kunde, utviklere eller testere.
+
+#### Relevant
+Her vil en søke svaret på to spørsmål: "*Behøver vi virkelig dette kravet?*"; og "*Er kravet så strikt som det burde være?*". For den som skal teste vil sistnevnte spørsmål være av viktighet, da et krav som er for strikt vil svare til mer arbeid for utvikleren, og et for slakt krav vil svare til mer arbeid for testeren.
+
+
+#### Oppnåelig
+En må spørre seg selv om et krav i det hele tatt er mulig å oppfylle. Testerene kan være med i denne diskusjonen ved å hele tiden spørre om hvordan et gitt krav er ment å testes. Dette vil kunne tvinge alle involverte parter til å gjøre hvert krav bedre definert.
+
+Dersom et krav er vanskelig å implementere vil det ofte og være vanskelig å teste.
+
+
+#### Sporbart
+Hvert enkelt krav må kunne relateres til et eller flere:
+	* programvarekomponenter
+	* prosessteg
+
+
+### Noen tips til kravsutforming
+Unngå modifiserende fraser som "etter nøvendighet" og "skal minimum gjøre X". Dette kan tolkes svært ulikt av ulike oppdragstakere, og en kan i beste fall kun være sikret et absolutt minimum. Vær klar i formuleringen!
+
+Unngå bruk av vage ord som "flagg", "håndtér", "spor". Informasjonssystemer *mottar*, *lagrer*, kalkulerer*, *rapporterer* og *sender* data, og vi bør helst bruke disse ordene for beskrive hva systemet skal gjøre.
+
+Unngå bruk av udefinerte pronomen, som for eksempel "*det skal vises på skjermen*". Dette krever at *det* defineres like før, og justeringer og endringer i rekkefølgen på krav kan ødelegge kravet fullstendig. En må og unngå bruk av "alle", "få", "andre", etc. da disse er plassholdere for ikke-navngitte individer og er åpne for tolkning.
+
+Unngå bruk av passiv stemme. Ikke definér at "*Z skal kalkuleres*", men heller "*Systemet skal kalkulere Z*".
+
+Angående negative krav, vil i prinsippet *alt* som ikke er definert i kravsspesifikasjonen være noe som systemet *ikke* skal gjøre. Bytt derfor ut alle tilfeller hvor spesifikasjonen sier noe om hva systemet ikke skal gjøre til aktive definisjoner på hva systemet *skal* gjøre – fra "*systemet skal ikke godta X*" til "*systemet skal forhindre Y*".
+
+Alle antakelser og sammenligninger må klart definerte. Det å anta status quo og peke på at systemet skal føre til "15% høyere throughput" eller "systemet skal adressere brukernes fremtidige behov" vil alltid peke mot framtiden.
+
+
+
+
+### Implementasjonen
+
+#### Autonomitet
+Hvor mange andre systemer må være på plass for å teste et gitt krav? Der er en overhengende fare for at en må planlegge og implementere mer eller mindre komplekse "stubber" som tar for seg manglende systemer.
+
+#### Observerbarhet
+Da ikke alle tester produserer utdata vi to spørsmål være viktig å besvare i slike tilfeller: Hvor enkelt er det å observere en testutførings progresjon?; og Hvor enkelt er det å observere et testresultat?
+
+#### Gjentesteffektivitet (re-test efficiency)
+Hvor enkelt er det å utføre "test-kontrollér-forandre-gjentest"-sykelen? Dette inkluderer både testens observerbarhet og sporbarhet.
+
+#### Test-gjenstartbarhet (test restartability)
+Hvor enkelt er det å stoppe testen midlertidig? Hvor enkelt er det å studere nåværende tilstand og utdata? Hvor enkelt er det å starte testen fra det punktet den ble stoppet? Hvor enkelt er det å starte testen fra start?
+
+
+## Oppsummering
+For å sikre at et krav er testbart er det viktig at testere involveres helt fra starten av prosjekter, og at tester er en integrert del av kravet.
+
+Selv om et krav er testbart betyr ikke dette at et krav er *enkelt* å teste. 
+
+
+
+
+# 
+
+
+
