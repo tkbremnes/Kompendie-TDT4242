@@ -374,10 +374,3 @@ For å sikre at et krav er testbart er det viktig at testere involveres helt fra
 
 Selv om et krav er testbart betyr ikke dette at et krav er *enkelt* å teste. 
 
-
-
-
-# 
-
-
-
