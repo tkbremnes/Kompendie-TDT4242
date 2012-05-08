@@ -1,6 +1,6 @@
+# Test vs. inspection
 
-
-Noen defekter er viktige ettersom de oppstår ofte. De fleste defekter er derimot mindre viktige, da de oppstår sjeldent. Problemet er å skille disse to tilfellene fra hverandre. Hvordan gjør en det mest effektivt og så nøyaktig som mulig.
+Noen defekter er viktige ettersom de oppstår ofte. De fleste defekter er derimot mindre viktige, da de oppstår sjeldent. Problemet er å skille disse to tilfellene fra hverandre. Hvordan gjør en det mest effektivt og så nøyaktig som mulig?
 
 
 
@@ -57,13 +57,16 @@ Testing kan ikke alltid gjøres – til å begynne med har en ikke kode å teste
 	</tr>
 </table>
 
-Et menneske er derfor bra når en behøver en evne til å håndtere varierte situasjoner, være innovativ og induktiv, samt når en vil gjenkjenne mønstre. Mennesker er mindre gode til å gjøre det samme om og om igjen på en konsistent måte. Ei heller når store datamengder skal håndteres. Til slikt benytter en seg av maskiner. Menneske og maskin utfyller dessuten hverandre ved å utnytte hverandres styrker. Dette gjøres for eksempel ved at maskinen hjelper mennesket å håndtere store mengder informasjon, og mennesket hjelper maskinen ved å gi den innovative inndata.
+Et menneske er derfor bra når en behøver en evne til å håndtere varierte situasjoner, være innovativ og induktiv, samt når en vil gjenkjenne mønstre. Mennesker er på den andre siden mindre gode til å gjøre det samme om og om igjen på en konsistent måte. Dette gjør at menneskelig behanding av store datamengder ikke er å anbefale. Til slikt benytter en seg av maskiner.
+Menneske og maskin utfyller hverandre ved å utnytte hverandres styrker, ved at maskinen hjelper mennesket å håndtere store mengder informasjon, og mennesket hjelper maskinen ved å gi den innovative inndata.
 
 
 ## Generell konsiderasjon
 
 ### Dokumenter
-Design av arkitektur, system, sub-system og komponenter, samt pseudo-kode er eksempler på _dokumenter_, områder hvor tester enten ikke fungerer i det hele tatt, eller fungerer mindre bra. Her kan/bør vi kun benytte oss av inspeksjoner. Mennesket bruker sin erfaring og kunnskap til å identifisere mulige problemer, maskinen tilbyr støtte via å idetifisere relevant informasjon.
+Design av arkitektur, system, sub-system og komponenter, samt pseudo-kode er eksempler på _dokumenter_, områder hvor tester enten ikke fungerer i det hele tatt, eller fungerer mindre bra. Her bør vi kun benytte oss av inspeksjoner.
+
+Mennesker bruker sin erfaring og kunnskap til å identifisere mulige problemer, maskinen tilbyr støtte via å idetifisere relevant informasjon.
 
 ### Kode
 For eksekvérbar kode kan en benytte seg av inspeksjon, testing eller en kombinasjon av begge disse, avhengig av kodens størrelse og kompleksitet. Andre viktige faktorer som farger valget av inspeksjon og test er programmeringsspråket og algoritmer som brukes for realiseringen.
