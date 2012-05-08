@@ -84,7 +84,7 @@ For alle inspeksjonstyper - GIGO. Det kan og være en god idé å involvere kund
 
 ### Walkthrough
 Intern.
-Tidlig beslutningstaking.
+Bukes for tiwdlig beslutningstaking.
 
 1. Skape en grov skisse av løsningen
 	* Arkitektur, algoritme, etc.
