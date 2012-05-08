@@ -7,6 +7,7 @@ Kompendiets kapitler er nummerert etter forelesningsnummer. Benyttet syntaks er 
 
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
+[ekun](http://glittum.org)
 
 ## For å bygge
 Installere pandoc
