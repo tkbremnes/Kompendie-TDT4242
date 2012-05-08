@@ -58,12 +58,13 @@ Håndtering av kvalitetssikring handler om å maksimere et produkts _kvalitet_. 
 Endringshåndtering handler om å 
 spore effektene av hver enkelt endring i ...
 
-Gjenbruk
-Peke ut de aspekter som 
+Gjenbruk vil peke på de aspekter av en gjenbrukt komponent som behøves adapteres til de nye systemkravene. Til og med kravene i seg selv kan være ting som kan gjenbrukes.
 
+Validering vil bruke sporbarheten til å peke på kravenes kvalitetet når det kommer til kompletthet, tvetydighet, forward referencing, opasitet (tetthet). Vil også sikre at hvert av kravene dekkes av minst én del av produktet
 
-// Lese bedre til senere
+Verifikasjon vil sjekke at de begrensninger en har overholdes.
 
+I tillegg kommer det utfordringer relatert til sertifisering/audit, samt testing og vedlikehold.
 
 
 
@@ -219,12 +220,14 @@ Typer aksesseringstyper gitt i denne metoden er:
 ### Ulemper ved bruk av scenario-drevet sporbarhet
 Selv om scenario-drevet sporbarhet ofte er semi-automatiserte trenger de allikevel mye tid av systemingeniører som iterativt må identifisere et subsett testscenarioer og hvordan disse relaterer til kravsartefakter. Videre er det ikke alltid at krav som per metodene gitt over ikke er relaterte, ikke er relaterte i en annen form (som for eksempel deling av data, implementasjons-pattern).
 
+Jeg ser for meg det er her Singleton-patternet kan være problematisk (TK).
+
 
 
 ## Sporing via tagging
 Denne metoden er enkel både å forstå og å implementere. Ulempen er dog at den er sterkt avhengig av menneskelig innblanding. Prinsippet med tagging er at hver enkelt krav gis en _tagg_, enten manuelt eller av et verktøy. Hvert enkelt dokument, kodesnutt, etc. gis også hver sin tagg.
 
-Ulike fremgangsmåter kan benyttes – tagger kan være enten enkeltnivå eller flernivå. Ved bruk av enkeltnivå (eks. R4) får en en enkel sporingsmatrise. Ved bruk av flernivå-tagger (eks. R4, hvor R4.1 og R4.2 er sub-nivå av R4) vil en enkelt kunne gruppere logiske samlinger krav, og dermed få mer detaljert sporingsinformasjon.
+Ulike fremgangsmåter kan benyttes – tagger kan være enten enkeltnivå eller flernivå. Ved bruk av enkeltnivå (eks. R4) får en en enkel sporingsmatrise. Ved bruk av flernivå-tagger (eks. hvor R4.1 og R4.2 er sub-nivå av R4) vil en enkelt kunne gruppere logiske grupperinger av krav, og en kan dermed få mer detaljert sporingsinformasjon.
 
 Sporbarhetens kvalitet vil bero på at vi alltid husker å (korrekt) tagge alle relevante dokumenter og artefakter. Der finnes verktøy som kan kontrollere at alle dokumenter i databasen er tagget, men korrektheten av disse taggene er derimot ikke gitt.
 

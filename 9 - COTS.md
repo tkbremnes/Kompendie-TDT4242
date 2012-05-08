@@ -233,7 +233,7 @@ Bruk av en wrapper er nødvendig for å oppnå en rekke ønskede effekter.
 #### _Fault_-injeksjon
 En _fault_ er en abnomal kondisjon eller defekt som i tur kan forårsake en _failure_. _Fault_-injeksjon involverer det å forsettelig legge inn feil i programvaren for å fremprovososere en respons. _Fault_-injeksjon involverer to steg.
 
-Først vil en identifisere det settet _faults_ som kan oppsåt i en applikasjon, en modul, klasse eller metode. Det er med sandre ord ingen poeng i injisere nettverksfeil i programvare som ikke bruker nettverkskommunikasjon. En injiserer så slike feil i programvaren for å evaluere hvordan disse håndteres. En ønsker å kartlegge om applikasjonen detekterer feil, hvorvidt feilen isoleres og om applikasjonen overlever?
+Først vil en identifisere det settet _faults_ som kan oppstå i en applikasjon, modul, klasse eller metode. Det er med andre ord ingen poeng i injisere nettverksfeil i programvare som ikke bruker nettverkskommunikasjon. En injiserer så slike feil i programvaren for å evaluere hvordan disse håndteres. En ønsker å kartlegge om applikasjonen detekterer feil, hvorvidt feilen isoleres og om applikasjonen overlever?
 
 // TODO: Fylle ut litt mer her
 
@@ -241,20 +241,19 @@ Først vil en identifisere det settet _faults_ som kan oppsåt i en applikasjon,
 ### Testing av ekstern robusthet
 Feilhåndtering må testes for å kontrollere at:
 
-* Feil i inndata gir en feilmelding.
-* Feilmeldingen er lett forståelig for de intenderte sluttbrukerne.
-* Applikasjonen skal kunne fortsette etter feilen med et minimum tap av informasjon.
+* Feil i inndata brekker ikke applikasjonen, men gir en førståelig feilmelding. Denne feilmeldingen er lett forståelig for de intenderte sluttbrukerne, informasjonsnivået må tilpasses interessenter.
+* Applikasjonen skal kunne fortsette etter feilen med minimum tap av informasjon.
 * Applikasjonen skal gå til en _definert_ tilstand ved feil.
 
 
 #### Feilmeldinger
-En bruker skal ha all den informasjonen som behøves for å kunne korrigere feil i inndata, samt fortsette arbeidet fra nåværende tilstand. Dette krever innsikt i brukeren og brukerens behov. Dette testes ved å få en bruker til å arbeide med en realistisk oppgave, for så å skape en feil. Ved å observere brukeren og brukerens reaksjon vil en kunne se hvorvidt der er noen assistanse i feilmeldingen.
+En bruker skal ha all den informasjonen som behøves for å kunne korrigere feil i inndata, samt fortsette arbeidet fra nåværende tilstand. Dette krever innsikt i brukeren og brukerens behov. Dette testes ved å få en bruker til å arbeide med en realistisk oppgave, for så å skape en feil.
 
-
+Ved å observere brukeren og brukerens reaksjon vil en kunne se hvorvidt der er noen assistanse i feilmeldingen.
 
 
 ## Sekvensiell testing
-For å kunne utføre sekvensiell testing trenger en en rekke variabler.
+For å kunne utføre sekvensiell testing trenger man en rekke variabler.
 
 * Target failure rate p1
 * Uakseptabel failure rate p2, hvor p2>p1
@@ -263,6 +262,8 @@ For å kunne utføre sekvensiell testing trenger en en rekke variabler.
 	* `b ≈ ln( (β-1) /   α   )`
 
 WHOA DUDE! Dette ble plutselig veldig matematisk!
+
+Got it. Magic.
 
 ### Oppsummering
 Ved testing av programvare (`p<10^-3`) vil den sekvensielle testmetoden behøver et stort antall tester og bør derfor kun brukes for å teste robusthet basert på tilfeldig genenererte inndata. Ved inspeksjon av dokumenter (`p<10^-1`) vil metoden gi verdifull informasjon selv når en inspiserer et rimelig antall dokumenter.
