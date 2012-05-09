@@ -10,6 +10,8 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
 
+[ekun](http://glittum.org)
+
 ## For å bygge
 Installere pandoc
 
@@ -18,7 +20,7 @@ Installere Ruby
 Kjøre `ruby build.rb`
 
 ## Ferdige kapitler
-Ingen
+15, 12, 11, 3(under review)
 
 ## Gjenstår å gjøre
 * Alle kapitler
