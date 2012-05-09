@@ -33,10 +33,7 @@ For å oppnå dette er det definert en rekke mål:
 
 
 ## Utfordringer
-Det foreligger en rekke utfordringer ved ...
-
-
-Blant disse er 
+Det foreligger en rekke utfordringer som en må ta hensyn til når det kommer til sporing av krav. Blant disse er:
 
 Spor må identifiseres og registreres blant et stort antall hetrogene entiteter, instanser, 
 Det kan være vanskelig å skape betydningsfulle relasjoner i en slik kompleks kontekst.
@@ -55,8 +52,7 @@ Prosjektet har gjerne en rekke ulike interessenter. Disse har ulikt syn på pros
 
 Håndtering av kvalitetssikring handler om å maksimere et produkts _kvalitet_. Denne kvaliteten skal være dokumentert i kravsspesifikasjonen, og spørsmål som derfor spørres i denne sammenhengen er _"Hvor nære er vi kravsspesifikasjonen vår?"_ og _"Hva kan vi gjøre bedre?"_.
 
-Endringshåndtering handler om å 
-spore effektene av hver enkelt endring i ...
+Endringshåndtering handler om å spore effektene av hver enkelt endring. Dette gjøres ofte via firewall, etc.
 
 Gjenbruk vil peke på de aspekter av en gjenbrukt komponent som behøves adapteres til de nye systemkravene. Til og med kravene i seg selv kan være ting som kan gjenbrukes.
 
@@ -80,8 +76,11 @@ Metamodell
 Metamodeller for sporbarhet av krav benyttes ofte som basis for sporbarhetsmetodologier og -rammeverk. Dette for å kunne fastslå og definere hvilke typer artefakter som skal spores, samt definere hvilke typer relasjoner som kan etableres mellom disse artefaktene.
 
 [STAKEHOLDER] --Manages--> [SOURCE] --Documents--> [OBJECT]
+
 [STAKEHOLDER] --Has role in --> [OBJECT]
+
 [OBJECT] --Traces to--> [OBJECT]
+
 [STAKEHOLDER] --Has role in --> --Traces to--> [OBJECT]
 
 Der skilles ofte mellom high-end- og low-end-sporbarhet.
@@ -142,9 +141,9 @@ Metoden benytter seg av det den kaller et _footprint_ for å oppnå sporbarhet. 
 <table>
 	<tr>
 		<td></td>
-		<td><strong>Test-scenario</strong></td>
-		<td><strong>Artefakt</strong></td>
-		<td><strong>Observerte Java-klasser</strong></td>
+		<th>Test-scenario</th>
+		<th>Artefakt</th>
+		<th>Observerte Java-klasser</th>
 	</tr>
 	<tr>
 		<td>1</td>
@@ -265,12 +264,13 @@ Testability
 
 
 
-Testabilitet tar for seg to hovedområder: hvor enkelt det er å teste en gitt implementasjon; og hvor *test-vennlig* et gitt krav er. Disse to problemer er ikke uavhengige av hverandre og må alltid sees på sammen.
+Testbarhet tar for seg to hovedområder: hvor enkelt det er å teste en gitt implementasjon; og hvor *test-vennlig* et gitt krav er. Disse to problemene er ikke uavhengige av hverandre og må alltid sees på sammen.
 
 
 ## Testabilitet
 
-For å kunne være testbart må et gitt krav være definert på en konkret måte. "When the ACC system is turned on, the "Active" lighet on the dashboard shall be turned on." er et eksempel på et krav som er tilstrekkelig definert. Dette i motsetning til "The system shall be easy to use" som må endres for å gjøres testbart.
+For å kunne være testbart må et gitt krav være definert på en konkret måte. _"When the ACC system is turned on, the __Active__ light on the dashboard shall be turned on."_ er et eksempel på et krav som er tilstrekkelig definert. Dette i motsetning til _"The system shall be easy to use"_ som må endres for å gjøres testbart.
+En metode som brukes for å få et slikt krav mer definert og testbart er å bruke din indre 4-åring og spørre _"Hva mener du med det"_ repetetivt til du får et krav som er mer kvantitativt testbart (_"Systemet skal kunne brukes effektiv etter tre dagers bruk"_). 
 
 Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *test-eksekvering* (inkluderer black, white og grey box-testing); gjennom å *gjøre eksperimenter* og *kodeinspeksjon*.
 
@@ -280,9 +280,13 @@ Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *test-e
 ## Utfordringer
 
 Problemer relatert til:
-Volumet til testene som skal utføres (responstid, lagringskapasitet)
-Typen hendelse som skal testes (feilhåndtering, sikkerhetsmekanismer)
-Systemets tilstand før det skal testes (uvanlig feiltilstand, en gitt transaksjonshistorikk)
+
+* Volumet til testene som skal utføres
+	* responstid, lagringskapasitet
+* Typen hendelse som skal testes
+	* feilhåndtering, sikkerhetsmekanismer
+* Systemets tilstand før det skal testes
+	* uvanlig feiltilstand, en gitt transaksjonshistorikk
 
 
 
@@ -293,8 +297,7 @@ Systemets tilstand før det skal testes (uvanlig feiltilstand, en gitt transaksj
 Der er imidlertid to problemer med denne metoden. For det første kan testene som metoden resulterer i være svært ekstensive, og dermed dyre. For det andre krever metoden tilgang til systemets sluttbrukere.
 
 
-(tekst på slide 11)
-1. What do you mean by <requirement>? This eill give us either (a) a testable requirement or (b) a set of testable and non-testable sub-requirements.
+1. What do you mean by <requirement>? This will give us either (a) a testable requirement or (b) a set of testable and non-testable sub-requirements.
 2. In case (a) we are finished. In case (b) we will repeat question 1 for each non-testable sub-requirements.
 
 
@@ -302,10 +305,7 @@ Der kan oppstå problemer knyttet til definering av systemets tilstander. Dersom
 
 I flyeksemplet kan et svar på dette være er at et fly har landet når en gitt vekt hviler på landingshjulene. Dette kan imidlertid være problematisk når flyet skal lande i motvind, og dermed genererer ekstra oppdrift, slik at flyet ikke vil kunne *lande* etter de definisjonen.
 
-
 Først og fremst må kunden vite nøyaktig *hva* han vil og *hvorfor* han vil ha det. Det er ofte mye enklere å teste om kundens oppnår sine mål med applikasjonen enn det er å teste at et system oppfyller et gitt krav. *Hvorfor* er dog sjeldent en del av en kravsspesifikasjon.
-
-
 
 
 ### Krav til testbarhet
@@ -317,7 +317,8 @@ Uten feil.
 
 
 #### Komplett
-Må dekke alle situasjoner, "dersom X så..." og "dersom Y så...". Må også dette de tilfeller hvor X og Y ikke inntreffer.
+Må dekke alle situasjoner, "dersom X så..." og "dersom Y så...". _Må også dette de tilfeller hvor X og Y ikke inntreffer._
+Alt som ikke defineres er per definisjon utenfor kravsspesifikasjonen og skal ikke være tilstede.
 
 #### Konsistent
 Et krav kan ikke være i konflikt med andre krav. Dette kan være en utfordring da vi da trenger en komplett oversikt over alle krav. Vi kan dog i de fleste tilfeller klare oss med å kontrollere alle krav som er relatert til samme hendelse, funksjon eller parameter.
@@ -341,18 +342,18 @@ Hvert enkelt krav må kunne relateres til et eller flere:
 	* prosessteg
 
 
-### Noen tips til kravsutforming
+### Noen tips til utforming av krav
 Unngå modifiserende fraser som "etter nøvendighet" og "skal minimum gjøre X". Dette kan tolkes svært ulikt av ulike oppdragstakere, og en kan i beste fall kun være sikret et absolutt minimum. Vær klar i formuleringen!
 
-Unngå bruk av vage ord som "flagg", "håndtér", "spor". Informasjonssystemer *mottar*, *lagrer*, kalkulerer*, *rapporterer* og *sender* data, og vi bør helst bruke disse ordene for beskrive hva systemet skal gjøre.
+Unngå bruk av vage ord som "flagg", "håndtér", "spor". Informasjonssystemer *mottar*, *lagrer*, *kalkulerer*, *rapporterer* og *sender* data, og vi bør helst bruke disse ordene for beskrive hva systemet skal gjøre.
 
-Unngå bruk av udefinerte pronomen, som for eksempel "*det skal vises på skjermen*". Dette krever at *det* defineres like før, og justeringer og endringer i rekkefølgen på krav kan ødelegge kravet fullstendig. En må og unngå bruk av "alle", "få", "andre", etc. da disse er plassholdere for ikke-navngitte individer og er åpne for tolkning.
+Unngå bruk av udefinerte pronomen, som for eksempel "*det skal vises på skjermen*". Dette krever at *det* defineres like før, og justeringer og endringer i rekkefølgen på krav kan ødelegge kravet fullstendig. En må og unngå bruk av "alle", "få", "andre", etc. da disse er plassholdere for ikke-navngitte individer og er åpne for tolkning. Bruk *navnet skal vises på skjermen* hver gang.
 
 Unngå bruk av passiv stemme. Ikke definér at "*Z skal kalkuleres*", men heller "*Systemet skal kalkulere Z*".
 
 Angående negative krav, vil i prinsippet *alt* som ikke er definert i kravsspesifikasjonen være noe som systemet *ikke* skal gjøre. Bytt derfor ut alle tilfeller hvor spesifikasjonen sier noe om hva systemet ikke skal gjøre til aktive definisjoner på hva systemet *skal* gjøre – fra "*systemet skal ikke godta X*" til "*systemet skal forhindre Y*".
 
-Alle antakelser og sammenligninger må klart definerte. Det å anta status quo og peke på at systemet skal føre til "15% høyere throughput" eller "systemet skal adressere brukernes fremtidige behov" vil alltid peke mot framtiden.
+Alle antakelser og sammenligninger må klart definerte. Det å anta status quo og peke på at systemet skal føre til "15% høyere throughput" eller "systemet skal adressere brukernes fremtidige behov" vil alltid peke mot framtiden og aldri kunne oppnåes.
 
 
 
@@ -375,5 +376,5 @@ Hvor enkelt er det å stoppe testen midlertidig? Hvor enkelt er det å studere n
 ## Oppsummering
 For å sikre at et krav er testbart er det viktig at testere involveres helt fra starten av prosjekter, og at tester er en integrert del av kravet.
 
-Selv om et krav er testbart betyr ikke dette at et krav er *enkelt* å teste. 
+Legg merke til at selv om et krav er testbart betyr ikke dette at et krav er *enkelt* å teste. 
 

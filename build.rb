@@ -1,32 +1,44 @@
-preamble = "% Kompendie \n% @kartoffelmos"
+preamble = "% Kompendie \n% TDT4242"
 output = preamble
 defList = "\n\n\#Definisjoner\n\n"
 
-fileList = %x[find . -name '*.md']
+fileListString = %x[find . -name '*.md']
+fileList = fileListString.split(/\n/)
 
 fileList.each do |filename|
-	fname = filename.chomp!
+	# fname = filename.chomp!
 
-	file = File.new(fname, "r")
-	prevLine = ""
-	prevDef = ""
+	file = File.new(filename, "r")
+	# prevLine = ""
+	# prevDef = ""
+	
+
+		# if line[0] == 58
+		# 	if not prevLine[0] == 58
+		# 		defList += prevLine + line
+		# 	else
+		# 		defList += line
+		# 	end
+		# end
+		# prevLine = line
+	# end
+
+	file = File.new(filename, "r")
 	file.each do |line|
-		if line[0] == 58
-			if not prevLine[0] == 58
-				defList += prevLine + line
-			else
-				defList += line
-			end
-		end
-		prevLine = line
-	end
+		if line[0] == '!'
+			puts "bilde!"
 
-	file = File.new(fname, "r")
+			replacement = filename.split(/\//)[0]
+			puts replacement
+		end
+	end	
+
+	file = File.new(filename, "r")
 	output += "\n\n"
 	output += file.read
 end
 
-output += defList
+# output += defList
 
 f = File.new("output.md", "w")
 f.write(output)
