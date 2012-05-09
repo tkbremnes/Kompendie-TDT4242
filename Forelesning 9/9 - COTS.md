@@ -24,13 +24,12 @@ Typer meta-data er for eksempel:
 * Bruks-mønstre
 	* Hvordan har komponenten blitt brukt til nå?
 
-Meta-data kan ta fryktelig mye plass, og er derfor en integrert, dog *lagret separat*, del av komponenten som helhet. Meta-data lastes ned/inn ved nødvendighet. Integrert i komponenten, men separat fra funksjonalitet.
-
+Meta-data kan ta fryktelig mye plass, og er derfor en integrert del av komponenten, dog *lagret separat*. Meta-data lastes ned/inn ved nødvendighet. Integrert i komponenten, men separat fra funksjonalitet.
 
 Hva kan en så bruke disse meta-dataene til i denne sammenhengen?
 
 * _Round trip path test_ basert på tilstandsdiagrammer
-* En kan skape _funksjonelle tester_ basert på algoritmer og pseudo-kode.
+* En kan skape _funksjonelle tester_ basert på algoritmer eller pseudo-kode.
 * Test-logger kan skape et grunnlag for _relevansevurdering_ av tester.
 
 
@@ -44,21 +43,20 @@ Retro-component
 
 
 ### Bruk av retrospectors
-Gjennom å samle informasjon om bruk har vi et bredere grunnlag for å kunne fjerne feil, samt teste programvare. For brukere av COTS-komponenter vil retrospectors fi verdifull informasjon om _hvordan komponentene ble testet_ og _hvordan komponenter har blitt brukt av andre_. Sistnevnte vil si oss noe om hvorvidt komponenten blir brukt på nye måter, noe som fører med seg en større risiko.
+Gjennom å samle informasjon om bruk har vi et bredere grunnlag for å kunne fjerne feil, samt teste programvare. For brukere av COTS-komponenter vil retrospectors gi verdifull informasjon om _hvordan komponentene ble testet_ og _hvordan komponenter har blitt brukt av andre_. Sistnevnte vil si oss noe om hvorvidt komponenten blir brukt på nye måter, noe som fører med seg en større risiko.
 
 
 
-## Built-In Test
+## Built-In Test(BIT)
 
-Nøkkeord:
+Nøkkelord:
 
-* Run-Time Testability
-
+* Run-Time Testability(RTT)
 
 Her trenger en to sett med tester:
 
 * I komponenten vil en teste at (test-) miljøet oppfører seg som foreskrevet.
-* I komponentens klienter vil en teste at komponenten implementerer de semantikker som klienter har blitt utviklet for å forvente.
+* I komponentens klienter vil en teste at komponenten implementerer de semantikker som klienten har blitt utviklet for å forvente.
 
 ### Testing av komponenter
 Når en vil teste komponenter gjør en det ved å utføre følgende to steg:
@@ -113,10 +111,11 @@ En må liste opp _starttilstand_, _forutsetning_ hvor det er hensiktsmessig, _he
 
 
 ### Valg av tester å utføre
-Ved valg av tester er det særlig to punkter en må vurdere: _testenes kvalitet_ og _testenes størrelse_. Dessverre er det ikke mulig å være best i alt – dess mer komprensiv test du har dess "bedre" er testen, men dess mer komprehensiv test dess større er den. Det samme gjelder testens størrelse. Her ønsker en at testen skal være rask å utføre, noe som legger sterkt press på å holde størrelsen nede. Løsningen på dette er å ha flere forskjellige testbatteri som utføres på ulike tidspunkt.
+Ved valg av tester er det særlig to punkter en må vurdere: _testenes kvalitet_ og _testenes størrelse_. Jo mer utfyllende test dess "bedre" er den, dessverre betyr dette også at jo mer utfyllende jo større er testen. 
+Når det gjelder testens størrelse så ønsker en at testen skal være rask å utføre, noe som legger sterkt press på å holde størrelsen nede. Løsningen på dette er å ha flere forskjellige sett med tester som utføres på ulike tidspunkt.
 
-### BIT-arktitektur
-BIT-ariktikturen består av følgende arktektur:
+### BIT-arkitektur(Built in test-arkitektur)
+BIT-arkitekturen består av følgende arkitektur:
 
 * Komponenten
 	* Med et eller flere grensesnitt og implementasjoner av funksjonalitet
@@ -135,29 +134,26 @@ BIT er av en _statisk natur_, en kjører én eller flere _forhåndsdefinerte_ te
 
 
 
-## Self Testing COTS Components (STECC)
-STECC har mye til felles med [BIT](#built-intest), dog med de hovedforskjeller at der hvor BIT er av en statisk natur vil STECC dynamisk generere nye tester basert på beskrivelser. STECC vil også kunne interagere med testeren.
+## Self TEsting COTS Components (STECC)
+STECC har mye til felles med [BIT](#built-intest), hovedforskjellene er at BIT er statisk og kjører en eller flere forhåndsdefinerte tester. STECC er dynamisk og genererer nye tester basert på beskrivelser. STECC vil også kunne interagere med testeren.
 
 En testgenerator vil generere tester, og være det leddet som kommuniserer med server for utveksling av metadata. Testgenerator vil kunne kommunisere til (?) testeren, samt sende spørringer [et sted].
 
-Mer informasjon finnes (trolig) på: <http://www.irma-international.org/viewtitle/30753/>.
-
-
-
 ## Assessing COTS
-Når en vurderer kandidatkomponenter for testing, må utviklere spørre seg selv følgende tre spørsmål for hver definerte scenario:
+Når en vurderer kandidatkomponenter for testing, må utviklere spørre seg selv følgende tre spørsmål for hvert definerte scenario:
 
 1. Oppfyller komponenten de behov _utvikler_ har?
 2. Er komponentens _kvalitet_ god nok?
 3. Hvilken innvirkning vil komponenten ha på _systemet_?
 
-
+Naturlig å betrakte svarene på disse spørsmålene i henhold til ulike scenarioer. Trengs komponenten C for systemet S? Er C av høy nok kvalitet? Har C en positiv innvirkning på S?
 
 ## Black box-test-reduksjon ved bruk av input-output-analyse
 Tilfeldig testing er aldri komplett.
 For å utføre komplett funksjonell testing kan en redusere antall test-caser ved hjelp av input-output-analyse. Relasjoner mellom input og output kan en identifisere ved bruk av _statisk analyse_ eller ved _kjøre analyse_ (execution analysis) av programmet.
 
 Det en ønsker å avdekke er hvilke inndata som påvirker hvilke utdata, for så å kunne finne den minimale mengden forskjellig testdata for å holde størrelsen nede (og hastighet oppe). Etter analysen kan en utføre black box-testing basert på de data som har blitt funnet.
+Se foil 9-1 for eksempel på en slik reduksjon. 
 
 
 
