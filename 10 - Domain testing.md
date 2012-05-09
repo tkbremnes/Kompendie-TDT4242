@@ -1,3 +1,0 @@
-# Domain testing
-
-fuckit

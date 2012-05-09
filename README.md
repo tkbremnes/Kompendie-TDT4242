@@ -9,6 +9,7 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
+
 [ekun](http://glittum.org)
 
 ## For å bygge
@@ -19,7 +20,7 @@ Installere Ruby
 Kjøre `ruby build.rb`
 
 ## Ferdige kapitler
-Ingen
+15, 12, 11, 3(under review), 5 (5.2 må korrekturleses)
 
 ## Gjenstår å gjøre
 * Alle kapitler
