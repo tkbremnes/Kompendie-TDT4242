@@ -20,7 +20,7 @@ Installere Ruby
 Kjøre `ruby build.rb`
 
 ## Ferdige kapitler
-15, 12, 11, 3(under review)
+15, 12, 11, 6, 3(under review)
 
 ## Gjenstår å gjøre
 * Alle kapitler
