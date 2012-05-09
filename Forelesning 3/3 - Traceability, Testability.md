@@ -272,7 +272,7 @@ Testbarhet tar for seg to hovedområder: hvor enkelt det er å teste en gitt imp
 For å kunne være testbart må et gitt krav være definert på en konkret måte. _"When the ACC system is turned on, the __Active__ light on the dashboard shall be turned on."_ er et eksempel på et krav som er tilstrekkelig definert. Dette i motsetning til _"The system shall be easy to use"_ som må endres for å gjøres testbart.
 En metode som brukes for å få et slikt krav mer definert og testbart er å bruke din indre 4-åring og spørre _"Hva mener du med det"_ repetetivt til du får et krav som er mer kvantitativt testbart (_"Systemet skal kunne brukes effektiv etter tre dagers bruk"_). 
 
-Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *test-eksekvering* (inkluderer black, white og grey box-testing); gjennom å *gjøre eksperimenter* og *kodeinspeksjon*.
+Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *__T__est-eksekvering* (inkluderer black, white og grey box-testing); gjennom å *gjøre __E__ksperimenter* og *kode__I__nspeksjon*.
 
 ![Konkrete krav fra høynivå-mål](img/1.png)
 
