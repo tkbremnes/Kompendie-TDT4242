@@ -22,6 +22,7 @@ Kjøre `ruby build.rb`
 ## Ferdige kapitler
 15, 12, 11, 3(under review), 5 (5.2 må korrekturleses)
 
+
 ## Gjenstår å gjøre
 * Alle kapitler
 * Build-skript som samler alle kapitler og bygger .mobi, .epub, .pdf (via LaTeX)og HTML.
