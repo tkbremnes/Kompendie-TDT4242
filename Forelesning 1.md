@@ -19,7 +19,7 @@ From test to requirement
 : Why do we need this test?
 
 From requirement to test
-: Where is this requirement ested?
+: Where is this requirement tested?
 
 Når en skal endre/justere et krav an en også finne relevante tester.
 
@@ -43,11 +43,11 @@ Preskriptive statements
 : Enforced **solely** by the software-to-be. Formulert av fenomen som deles mellom programvare og miljø.
 : Programvare forstår dette via sensorer, handler med aktuatorer.
 
-Hvor mye skal være opp til brukeren, vhor mye skal styres av programvare?
+Hvor mye skal være opp til brukeren, hvor mye skal styres av programvare?
 
 ## Målorientering
 
-Prpgramvare, milø. Interaksjon melleom aktive komponenter kalles *aktører*.
+Programvare, milø. Interaksjon melleom aktive komponenter kalles *aktører*.
 
 Requirement
 : A goal under the *responsibility@ ofa single agent tin the sw-to-be
@@ -69,7 +69,7 @@ Multi-agent goal	Single-agent goal
 	* Increase/reduce
 * Behavioural goal
 	* System behaviour
-	* Agent behaviout
+	* Agent behaviour
 	* Achieve/Cease
 	* Maintain/Avoid
 
