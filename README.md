@@ -9,7 +9,6 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
-
 [ekun](http://glittum.org)
 
 ## For å bygge
