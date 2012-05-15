@@ -39,11 +39,155 @@ Der er flere ulike måter å definere programvareintegritetsnivå. Valget av int
 
 ### IEEE 1012 – General Software
 
-![](Forelesning 06/img/tabell1.png)
+<table>
+	<tr>
+		<td>4</td>
+		<td>Høy</td>
+		<td>Enkelte funksjoner påvirker kritisk systemytelse.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Stor</td>
+		<td>Enkelte funksjoner påvirker viktig systemytelse.</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Moderat</td>
+		<td>Enkelte funksjoner påvirker systemytelsen, men omveier kan implementeres for å kompensere for dette.</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Lav</td>
+		<td>Enkelte funksjoner påvirker systemytelsen, men skaper kun ubeleiligheter.</td>
+	</tr>
+</table>
 
 #### V&V Activities
 
-![](Forelesning 06/img/tabell2.png)
+<table>
+	<tr>
+		<th>V&amp;V activity</th>
+		<th colspan="4">Develpment requirements level</th>
+		<th colspan="4">Design level</th>
+		<th colspan="4">Implementation level</th>
+		<th colspan="4">Test level</th>
+	</tr>
+	<tr>
+		<th>SW Integrity Level</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+	</tr>
+	<tr>
+		<th>Acceptance test execution</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Acceptance test plan</th>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Interface analysis</th>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Management and review support</th>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Management review of V&amp;V</th>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
 
 
 ### ISO 26262 – Automotive Software
@@ -51,13 +195,119 @@ Her benyttes en ASIL-skala – A, B, C, D – som et resultat av å kombinere tr
 
 #### Hvordan finne ASIL-nivå
 
-![](Forelesning 06/img/tabell3.png)
+<table>
+	<tr>
+		<td>Severity</td>
+		<td>Probability</td>
+		<td>C1</td>
+		<td>C2</td>
+		<td>C3</td>
+	</tr>
+	<tr>
+		<td rowspan=4>S1</td>
+		<td>E1</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>QM</td>
+	</tr>
+	<tr>
+		<td>E2</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>QM</td>
+	</tr>
+	<tr>
+		<td>E3</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>A</td>
+	</tr>
+	<tr>
+		<td>E4</td>
+		<td>QM</td>
+		<td>A</td>
+		<td>B</td>
+	</tr>
+
+	<tr>
+		<td rowspan=4>S2</td>
+		<td>E1</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>QM</td>
+	</tr>
+	<tr>
+		<td>E2</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>A</td>
+	</tr>
+	<tr>
+		<td>E3</td>
+		<td>QM</td>
+		<td>A</td>
+		<td>B</td>
+	</tr>
+	<tr>
+		<td>E4</td>
+		<td>A</td>
+		<td>B</td>
+		<td>C</td>
+	</tr>
+
+	<tr>
+		<td rowspan=4>S3</td>
+		<td>E1</td>
+		<td>QM</td>
+		<td>QM</td>
+		<td>A</td>
+	</tr>
+	<tr>
+		<td>E2</td>
+		<td>QM</td>
+		<td>A</td>
+		<td>B</td>
+	</tr>
+	<tr>
+		<td>E3</td>
+		<td>A</td>
+		<td>B</td>
+		<td>C</td>
+	</tr>
+	<tr>
+		<td>E4</td>
+		<td>B</td>
+		<td>C</td>
+		<td>D</td>
+	</tr>
+</table>
+
 
 
 ### IEC 61508 – Safety Critical Software
 
-![](Forelesning 06/img/tabell4.png)
-
+<table>
+	<tr>
+		<th>Safety integrity level</th>
+		<th>High demand or continous mode of operation</th>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>10^-9 to 10^-8</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>10^-8 to 10^-7</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>10^-7 to 10^-6</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>10^-6 to 10^-5</td>
+	</tr>
+</table>
 
 PFDavg = Ft / Fnp. Tabellen over gir SIL-nivå, sammen med denne verdien.
 
