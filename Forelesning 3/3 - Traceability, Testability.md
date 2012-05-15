@@ -1,22 +1,22 @@
 # Sporbarhet av krav
 Sporbarhet av krav er av Gotel og Finkelstein definert som: 
 
-> "[…] the ability to describe and follow the life of a requirement, _in both a forwards and backwards direction_, i.e. from its origins, through its development and specification, to its subsequent deployment and use, and through periods of on-going refinement and iterastion in any of the phases."
+> "[…] the ability to describe and follow the life of a requirement, _in both a forwards and backwards direction_, i.e. from its origins, through its development and specification, to its subsequent deployment and use, and through periods of on-going refinement and iteration in any of the phases."
 >
 > __Gotel og Finkelstein__ (1994)
 
-En legger med andre ord vekt på at alle de krav som et prosjekt har skal være sporbare _hele veien_ helt fra insepsjonen via utvikling og spesifikasjon til utplasseing og bruk.
+En legger med andre ord vekt på at alle de krav som et prosjekt har skal være sporbare _hele veien_ helt fra insepsjonen via utvikling og spesifikasjon til utplassering og bruk.
 
 For å oppnå dette er det definert en rekke mål:
 
-* Projekthåndtering
+* Prosjekthåndtering
 	* Status: "Når vil vi være ferdige?" og "Hva vil det koste?"
 	* Kvalitet: "Hvor nære er vi å nå våre mål?"
 * Håndtering av kvalitetssikring
 	* Forbedre kvalitet: "Hva kan vi gjøre bedre?"
 * Endringshåndtering
 	* Versjonering, dokumentasjon av forandringer (Hvorfor? Hva? Når?)
-	* Analyse av endingsinnvirkning
+	* Analyse av endringsinnvirkning
 * Gjenbruk
 	* Varianter og produktfamilier
 	* Krav kan bli målrettet for gjenbruk
@@ -35,7 +35,7 @@ For å oppnå dette er det definert en rekke mål:
 ## Utfordringer
 Det foreligger en rekke utfordringer som en må ta hensyn til når det kommer til sporing av krav. Blant disse er:
 
-Spor må identifiseres og registreres blant et stort antall hetrogene entiteter, instanser, 
+Spor må identifiseres og registreres blant et stort antall hetrogene entiteter, instanser. 
 Det kan være vanskelig å skape betydningsfulle relasjoner i en slik kompleks kontekst.
 
 Spor er videre i konstant forandring og bevelgelse, ettersom de vil kunne forandres ved forandringer i krav eller utviklingsartefakter.
@@ -95,7 +95,7 @@ Der skilles ofte mellom high-end- og low-end-sporbarhet.
 Det er en kritisk oppgave å kunne etablere koblinger, både mellom ulike krav, og mellom krav og andre artefakter. Manuell kobling og vedlikehold av slike koblinger er både dyrt og utsatt for feil. En ønsker derfor å kunne helt eller delvis automatisere denne oppgaven.
 
 
-### Manell sporingskobling
+### Manuell sporingskobling
 Manuell sporingskobling er den enkleste formen for sporbarhet. Her benytter en seg av _sporbarhetsmatriser_, enten ved bruk av hypertekst eller regnearkprogram som for eksempel Microsoft Excel for å skape kryssreferanseskjema. Der er i hovedsak to problemer med denne tilnærmingen: over tid vil det å vedlikeholde et stort antall koblinger bli vanskelig; og da koblingene er statiske (mangel på attributter) vil mangel på automasjon av oppgaver være begrenset.
 
 <table>
@@ -134,7 +134,7 @@ Scenario-drevet sporbarhet er en _testbasert_ tilnærming som benyttes for å av
 
 Trikset benyttet er å observere kjøretids-oppførselen til testscenarioer. Eksempler på verktøy som benytter seg av denne tilnærmingen er [IBM Rational PureCoverage](http://www.jfind.com/listings/1711.shtml). Kjøretidsoppførselen til applikasjonen oversettes til en grafstruktur som benyttes til å indikere fellestrekk mellom entiteter assosiert med hendelsen.
 
-Metoden benytter seg av det den kaller et _footprint_ for å oppnå sporbarhet. Dette fortsporet inneholder informasjon om det settet klasser som ble eksekvert når et spesifisert scenario testes, og antallet metoder som ble eksekvert i hver av disse klassene.
+Metoden benytter seg av det den kaller et _footprint_ for å oppnå sporbarhet. Dette fotsporet inneholder informasjon om det settet klasser som ble eksekvert når et spesifisert scenario testes, og antallet metoder som ble eksekvert i hver av disse klassene.
 
 <table>
 	<tr>
@@ -198,7 +198,7 @@ Det er imidlertid noen problemer tilknyttet til denne tilnærmingen. Det en kan 
 
 
 ### Utviklingsfotspor
-Utviklingsfotspot (development footprint) er en løsning som gjør det mulig å skape sporbarhetsinformasjon, utviklet av (Inah Omoronyia)[http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Omoronyia:Inah.html] et al. Denne metoden krever at hver utvikler alltid identifiserer det krav/use-case som han/hun jobber med på et gitt tidspunkt. En utvikler kan kun jobbe med et enkelt use-case om gangen.
+Utviklingsfotspor (development footprint) er en løsning som gjør det mulig å skape sporbarhetsinformasjon, utviklet av (Inah Omoronyia)[http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Omoronyia:Inah.html] et al. Denne metoden krever at hver utvikler alltid identifiserer det krav/use-case som han/hun jobber med på et gitt tidspunkt. En utvikler kan kun jobbe med et enkelt use-case om gangen.
 
 Resultatet av denne metoden vil være lik den som ved bruk av scenario-test-footpring-tabellen. Denne tabellen vil vise hvilke dokumenter, classer og lignende som har blitt aksessert gjennom arbeid med en gitt use-case.
 
@@ -239,7 +239,7 @@ Sporbarhet kan være komplekst for ikke-trivielle prosjekter.
 
 Sporbarhet-meta-modeller gir en insikt på typen sporbarhetsinformasjon som kreves for et prosjekt.
 
-Der eksisterer flere automatiserte tilnærmingerfor sporing av krav. Da de ulike automatiserte tilnærmingene har ulike styrker og svakheter vil den beste måten å benytte seg av disse ligge i kombinere disse riktig og dra nytte av synergieffekter dette gir.
+Der eksisterer flere automatiserte tilnærminger for sporing av krav. Da de ulike automatiserte tilnærmingene har ulike styrker og svakheter vil den beste måten å benytte seg av disse ligge i kombinere disse riktig og dra nytte av synergieffekter dette gir.
 
 
 
@@ -341,7 +341,7 @@ Hvert enkelt krav må kunne relateres til et eller flere:
 
 
 ### Noen tips til utforming av krav
-Unngå modifiserende fraser som "etter nøvendighet" og "skal minimum gjøre X". Dette kan tolkes svært ulikt av ulike oppdragstakere, og en kan i beste fall kun være sikret et absolutt minimum. Vær klar i formuleringen!
+Unngå modifiserende fraser som "etter nødvendighet" og "skal minimum gjøre X". Dette kan tolkes svært ulikt av ulike oppdragstakere, og en kan i beste fall kun være sikret et absolutt minimum. Vær klar i formuleringen!
 
 Unngå bruk av vage ord som "flagg", "håndtér", "spor". Informasjonssystemer *mottar*, *lagrer*, *kalkulerer*, *rapporterer* og *sender* data, og vi bør helst bruke disse ordene for beskrive hva systemet skal gjøre.
 
