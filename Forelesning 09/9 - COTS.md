@@ -230,8 +230,8 @@ For å kunne utføre sekvensiell testing trenger man en rekke variabler.
 * Target failure rate p1
 * Uakseptabel failure rate p2, hvor p2>p1
 * Akseptabel sannsynlighet for a gjøre en type I eller type II beslutningsfeil – og disse to verdiene brukes for å kalkulere a og b hvor 
-	* `a ≈ ln(   β   / (1-α) )`
-	* `b ≈ ln( (β-1) /   α   )`
+	* `a = ln(   beta   / (1-alpha) )`
+	* `b = ln( (beta-1) /   alpha  )`
 
 WHOA DUDE! Dette ble plutselig veldig matematisk!
 
@@ -245,7 +245,7 @@ Ved testing av programvare (`p<10^-3`) vil den sekvensielle testmetoden behøver
 Bayesisk statistikk benyttes for å kombinere de tre faktorene: _testresultater_; _kontrakturelle forpliktelser_; og _tidligere erfaring med leverandør_.
 
 Bayes' teorem
-: `P(B|A) ∝ P(A|B) P(B)`
+: `P(B|A) = P(A|B) P(B)`
 
 For å estimere `B` vil vi bruke sannsynligheten av våre observasjoner som `P(A)`, og bruke `P(B)` som modell på vår tidligere kunnskap.
 

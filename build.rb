@@ -44,5 +44,5 @@ f = File.new("output.md", "w")
 f.write(output)
 f.close
 
-%x[pandoc output.md --output output.pdf --toc]
+%x[pandoc output.md --output Kompendie.pdf --toc]
 %x[rm output.md]
