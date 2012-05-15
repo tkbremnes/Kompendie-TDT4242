@@ -98,35 +98,11 @@ Det er en kritisk oppgave å kunne etablere koblinger, både mellom ulike krav, 
 ### Manuell sporingskobling
 Manuell sporingskobling er den enkleste formen for sporbarhet. Her benytter en seg av _sporbarhetsmatriser_, enten ved bruk av hypertekst eller regnearkprogram som for eksempel Microsoft Excel for å skape kryssreferanseskjema. Der er i hovedsak to problemer med denne tilnærmingen: over tid vil det å vedlikeholde et stort antall koblinger bli vanskelig; og da koblingene er statiske (mangel på attributter) vil mangel på automasjon av oppgaver være begrenset.
 
-<table>
-	<tr>
-		<td>Unik ID</td>
-		<td>Krav</td>
-		<td>Kilde til krav</td>
-		<td>SW-krav-spek./ Funk. krav. dok.</td>
-		<td>Design-spek.</td>
-		<td>Program-modul</td>
-		<td>Test-case(r)</td>
-		<td>Vellykket test-verifikasjon</td>
-		<td>Modifikasjon av krav</td>
-		<td>Bemerkninger</td>
-	</tr>
-	<tr>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-	</tr>
-	<tr>
-		<td colspan="10" style="text-align:center;"><strong>Eksempel på manuelt kravssporingsskjema.</strong>
-	</tr>
-</table>
+---------------------------------------------------------------
+Unik ID Krav 	Kilde til krav 	SW-krav-spek./ Funk. krav. dok. 	Design-spek. 	Program-modul 	Test-case(r) 	Vellykket test-verifikasjon 	Modifikasjon av krav 	Bemerkninger
+------------	--------------	-------------------------------		------------	-------------	------------	---------------------------		--------------------	------------
+...				...				...									...				...				...				...								...						...
+---------------------------------------------------------------
 
 
 ### Scenario-drevet sporbarhet
@@ -136,60 +112,25 @@ Trikset benyttet er å observere kjøretids-oppførselen til testscenarioer. Eks
 
 Metoden benytter seg av det den kaller et _footprint_ for å oppnå sporbarhet. Dette fotsporet inneholder informasjon om det settet klasser som ble eksekvert når et spesifisert scenario testes, og antallet metoder som ble eksekvert i hver av disse klassene.
 
-<table>
-	<tr>
-		<td></td>
-		<th>Test-scenario</th>
-		<th>Artefakt</th>
-		<th>Observerte Java-klasser</th>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>Se liste over filmer</td>
-		<td>[s3]</td>
-		<td>[C, J, R, U]</td>
-	</tr>
-	<tr>
-		<td>2</td>
-		<td>Se kontekstuell informasjon om film</td>
-		<td>[s4, s6] [r2]</td>
-		<td>[C, E, J, N, R]</td>
-	</tr>
-	<tr>
-		<td>3</td>
-		<td>Velg/spill av film</td>
-		<td>[s8, s9] [r6]</td>
-		<td>[A, C, D, F, G, I, J, K, N, O, T, R, U]</td>
-	</tr>
-	<tr>
-		<td>4</td>
-		<td>Trykk stopp-knapp</td>
-		<td>[s9, s11] [r8]</td>
-		<td>[A, C, D, E, F, G, I, K, O, T, U]</td>
-	</tr>
-	<tr>
-		<td>5</td>
-		<td>Trykk spill-knapp</td>
-		<td>[s9, s11] [r9]</td>
-		<td>[A, C, D, F, G, I, K, N, O, T, R, U]</td>
-	</tr>
-	<tr>
-		<td>6</td>
-		<td>Bytt server</td>
-		<td>[s5, s7]</td>
-		<td>[C, R, J, S]</td>
-	</tr>
-	<tr>
-		<td>7</td>
-		<td>…</td>
-		<td>…</td>
-		<td>…</td>
-	</tr>
-	<tr>
-		<td colspan="4" style="text-align:center;"><strong>Eksempel</strong></td>
-	</tr>
+Eksempel:
 
-</table>
+------------------------------------------------------------------------------
+		*Test-scenario* 						*Artefakt* 		*Observerte Java-klasser*
+----	---------------							----------		-------------------------	
+1 		Se liste over filmer 					[s3] 			[C, J, R, U]
+
+2 		Se kontekstuell informasjon om film 	[s4, s6] [r2] 	[C, E, J, N, R]
+
+3 		Velg/spill av film 						[s8, s9] [r6] 	[A, C, D, F, G, I, J, K, N, O, T, R, U]
+
+4 		Trykk stopp-knapp						[s9, s11] [r8] 	[A, C, D, E, F, G, I, K, O, T, U]
+
+5		Trykk spill-knapp 						[s9, s11] [r9] 	[A, C, D, F, G, I, K, N, O, T, R, U]
+
+6 		Bytt server 							[s5, s7] 		[C, R, J, S]
+
+7		...										...				...
+------------------------------------------------------------------------------
 
 Det er imidlertid noen problemer tilknyttet til denne tilnærmingen. Det en kan komme over er at der finnes scenarioer som ikke dekker noen krav, og der kan finnes scenarioer som hører til flere krav. Slike hendelser må markeres i en separat tabell. En benytter seg her av symbolene "F" (fixed) og "P" (probable) for å markere et tilfelle, avhengig av hvor sikre vi er på at en gitt klasse tilhører et gitt scenario.
 
