@@ -101,7 +101,7 @@ Ulemper er at da prosessen er uformell er der ingen forpliktelser hos deltakerne
 ### Uformell inspeksjon
 Intern.
 
-![Uformell inspeksjon](img/1.png)
+![Uformell inspeksjon](Forelesning 05/img/1.png)
 
 
 #### Fordeler
@@ -121,7 +121,7 @@ Formell inspeksjon anbefales å være en del av den endelige akseptansetestingen
 Som utredet av [T. Gilb og D. Graham](http://books.google.no/books?id=GO11btO0-vIC&q=%22software+inspection%22&dq=%22software+inspection%22&hl=en&sa=X&ei=KNZ1T_WcKeL64QSn99mbDw&redir_esc=y)
 
 
-![Formell inspeksjon](img/2.png)
+![Formell inspeksjon](Forelesning 05/img/2.png)
 
 
 #### Distribusjon av resusser

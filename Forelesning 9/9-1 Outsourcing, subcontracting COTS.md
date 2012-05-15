@@ -15,7 +15,7 @@ Når vi tester COTS eller komponenter hvor utviklingen har blitt outsourced/subc
 
 ### Skape tillit til produktet:
 Man kan bygge tillit basert på : Produktet i seg selv, f.eks en COTS komponent. Prosessen - hvordan den ble utviklet og testet. Folket - personalet som har utviklet og testet komponenten. 
-![Product trustworthiness pattern](img/2.png)
+![Product trustworthiness pattern](Forelesning 09/img/2.png)
 
 ### Skape tillit til prosessen:
 Tillit i prosessen stammer fra tre kilder:

@@ -194,7 +194,7 @@ Metoden benytter seg av det den kaller et _footprint_ for å oppnå sporbarhet. 
 Det er imidlertid noen problemer tilknyttet til denne tilnærmingen. Det en kan komme over er at der finnes scenarioer som ikke dekker noen krav, og der kan finnes scenarioer som hører til flere krav. Slike hendelser må markeres i en separat tabell. En benytter seg her av symbolene "F" (fixed) og "P" (probable) for å markere et tilfelle, avhengig av hvor sikre vi er på at en gitt klasse tilhører et gitt scenario.
 
 
-![Eksempel]Forelesning 2/img/5.png)
+![Eksempel](Forelesning 03/img/5.png)
 
 
 ### Utviklingsfotspor
@@ -210,7 +210,7 @@ Typer aksesseringstyper gitt i denne metoden er:
 * U - Update
 * V - View
 
-![Eksempel på bruk av developer footprint]Forelesning 2/img/6.png)
+![Eksempel på bruk av developer footprint](Forelesning 03/img/6.png)
 
 
 
@@ -272,7 +272,7 @@ En metode som brukes for å få et slikt krav mer definert og testbart er å bru
 
 Der er i hovedsak tre måter å kontrollere at en har oppnådd ens mål: *__T__est-eksekvering* (inkluderer black, white og grey box-testing); gjennom å *gjøre __E__ksperimenter* og *kode__I__nspeksjon*.
 
-![Konkrete krav fra høynivå-mål]Forelesning 2/img/1.png)
+![Konkrete krav fra høynivå-mål](Forelesning 03/img/1.png)
 
 
 ## Utfordringer
