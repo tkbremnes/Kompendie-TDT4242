@@ -8,56 +8,25 @@ Testing kan ikke alltid gjøres – til å begynne med har en ikke kode å teste
 
 ## Fit's List
 
+---------------------------------------------------------------------------
+*Area of competence* 	*Man* 														*Machine*
+--------------------	-----														---------
+Understanding 			Good at handling variations in written material 			Bad at handling variations in written material
 
-<table>
-	<tr>
-		<td><strong>Area of competence</strong></td>
-		<td><strong>Man</strong></td>
-		<td><strong>Machine</strong></td>
-	</tr>
+Observe 				General observations, multifunctional 						Specialized, good at observing quantitative data, bad at pattern recognition
 
-	<tr>
-		<td><em>Understanding</em></td>
-		<td>Good at handling variations in written material</td>
-		<td>Bad at handling variations in written material</td>
-	</tr>
-	<tr>
-		<td><em>Observe</em></td>
-		<td>General observations, multifunctional</td>
-		<td>Specialized, good at observing quantitative data, bad at pattern recognition</td>
-	</tr>
-	<tr>
-		<td><em>Reasoning</em></td>
-		<td>Inductive, slow, imprecise but good at error correction</td>
-		<td>Deductive, fast, precise but bad error correction</td>
-	</tr>
-	<tr>
-		<td><em>Memory</em></td>
-		<td>Innovative, several access mechanisms</td>
-		<td>Copying, formal access</td>
-	</tr>
-	<tr>
-		<td><em>Information handling</em></td>
-		<td>Single channel, less than 10 bits per second</td>
-		<td>Multi channel, several Megabits per second</td>
-	</tr>
-	<tr>
-		<td><em>Consistency</em></td>
-		<td>Unreliable, get tired, depends on learning</td>
-		<td>Consistent repetition of several actions</td>
-	</tr>
-	<tr>
-		<td><em>Power</em></td>
-		<td>Low level, maximum ca. 150 watt</td>
-		<td>High level over long periods of time</td>
-	</tr>
-	<tr>
-		<td><em>Speed</em></td>
-		<td>Slow – seconds</td>
-		<td>Fast</td>
-	</tr>
-</table>
+Reasoning				Inductive, slow, imprecise but good at error correction		Deductive, fast, precise but bad error correction
 
+Memory 					Innovative, several access mechanisms 						Copying, formal access
+
+Information handling 	Single channel, less than 10 bits per second 				Multi channel, several Megabits per second
+
+Consistency 			Unreliable, get tired, depends on learning 					Consistent repetition of several actions
+
+Power 					Low level, maximum ca. 150 watt 							High level over long periods of time
+
+Speed 					Slow – seconds 												Fast
+---------------------------------------------------------------------------
 
 Et menneske er derfor bra når en behøver en evne til å håndtere varierte situasjoner, være innovativ og induktiv, samt når en vil gjenkjenne mønstre. Mennesker er på den andre siden mindre gode til å gjøre det samme om og om igjen på en konsistent måte. Dette gjør at menneskelig behanding av store datamengder ikke er å anbefale. Til slikt benytter en seg av maskiner.
 Menneske og maskin utfyller hverandre ved å utnytte hverandres styrker, ved at maskinen hjelper mennesket å håndtere store mengder informasjon, og mennesket hjelper maskinen ved å gi den innovative inndata.
@@ -128,35 +97,18 @@ Som utredet av [T. Gilb og D. Graham](http://books.google.no/books?id=GO11btO0-v
 
 #### Distribusjon av resusser
 
+---------------------------------------------------------------------------
+						*Range (%)* 	*Typisk verdi (%)*
+------					-----------		------------------
+Planning 				3-5 			4
 
-<table>
-	<tr>
-		<td></td>
-		<td><strong>Range (%)</strong></td>
-		<td><strong>Typisk verdi (%)</strong></td>
-	</tr>
-	<tr>
-		<td>Planning</td>
-		<td>3-5</td>
-		<td>4</td>
-	</tr>
-	<tr>
-		<td>Kick-off</td>
-		<td>4-7</td>
-		<td>6</td>
-	</tr>
-	<tr>
-		<td>Individual checking</td>
-		<td>20-30</td>
-		<td>25</td>
-	</tr>
-	<tr>
-		<td>Logging meeting</td>
-		<td>…</td>
-		<td>…</td>
-	</tr>
-</table>
+Kick-off 				4-7 			6
 
+Individual checking 	20-30			25
+
+Logging meeting			... 			...
+
+---------------------------------------------------------------------------
 
 (TODO: Resten av slide 24 har falt bort)
 
