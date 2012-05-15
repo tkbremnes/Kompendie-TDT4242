@@ -70,44 +70,20 @@ Når en vil teste komponenter gjør en det ved å utføre følgende to steg:
 
 En må liste opp _starttilstand_, _forutsetning_ hvor det er hensiktsmessig, _hendelse_ og _sluttilstand_. Under er et eksempel for en enkel girkasse.
 
-<table>
-	<tr>
-		<td></td>
-		<td><strong>Starttilstand</strong></td>
-		<td><strong>Forutsetning</strong></td>
-		<td><strong>Hendelse</strong></td>
-		<td><strong>Sluttilstand</strong></td>
-	<tr>
-		<td>1</td>
-		<td>Neutral</td>
-		<td>[momentum < ReverseMomentum]</td>
-		<td><code>toReverse()</code></td>
-		<td>Reverse</td>
-	<tr>
-		<td>2</td>
-		<td>Reverse</td>
-		<td></td>
-		<td><code>toNeutral()</code></td>
-		<td>Neutral</td>
-	<tr>
-		<td>3</td>
-		<td>Neutral</td>
-		<td>[momentum < Gear1Momentum]</td>
-		<td><code>toGear1()</code></td>
-		<td>Gear1</td>
-	<tr>
-		<td>4</td>
-		<td>Gear1</td>
-		<td></td>
-		<td><code>toNeutral()</code></td>
-		<td>Neutral</td>
-	<tr>
-		<td>5</td>
-		<td>...</td>
-		<td>...</td>
-		<td>...</td>
-		<td>...</td>
-</table>
+---------------------------------------------------------------------------------------------------
+. 	*Starttilstand*     *Forutsetning*					*Hendelse*		*Sluttilstand*
+---	-----------------   ----------------- 				-----------		---------------
+1 	Neutral 			[momentum < ReverseMomentum] 	`toReverse()` 	Reverse
+
+2 	Reverse 			- 								`toNeutral()` 	Neutral
+
+3 	Neutral 			[momentum < Gear1Momentum] 		`toGear1()` 	Gear1
+
+4 	Gear1 				- 								`toNeutral()` 	Neutral
+
+5 	... 				... 							... 			...
+---------------------------------------------------------------------------------------------------
+
 
 
 ### Valg av tester å utføre
