@@ -66,12 +66,12 @@ Menneske og maskin utfyller hverandre ved å utnytte hverandres styrker, ved at 
 ### Dokumenter
 Design av arkitektur, system, sub-system og komponenter, samt pseudo-kode er eksempler på _dokumenter_, områder hvor tester enten ikke fungerer i det hele tatt, eller fungerer mindre bra. Her bør vi kun benytte oss av inspeksjoner.
 
-Mennesker bruker sin erfaring og kunnskap til å identifisere mulige problemer, maskinen tilbyr støtte via å idetifisere relevant informasjon.
+Mennesker bruker sin erfaring og kunnskap til å identifisere mulige problemer, maskinen tilbyr støtte via å identifisere relevant informasjon.
 
 ### Kode
 For eksekvérbar kode kan en benytte seg av inspeksjon, testing eller en kombinasjon av begge disse, avhengig av kodens størrelse og kompleksitet. Andre viktige faktorer som farger valget av inspeksjon og test er programmeringsspråket og algoritmer som brukes for realiseringen.
 
-En generell regel er at om en står overfor en tilstrekkelig liten kodebase vil en kunne utføre inspeksjon av hele denne basen, for så å desgne og utføre tester på bakgrunn av funnene her. I tifelle kompleks kode, vil en og starte med inspeksjon av koden, men her vil en fokusere på algoritmer og logikk. Da en i slike tilfeller ikke kan teste _hele_ kodebasen, vil en måtte utforme kompletthetskriterer for testene, som deretter designes og kjøres.
+En generell regel er at om en står overfor en tilstrekkelig liten kodebase vil en kunne utføre inspeksjon av hele denne basen, for så å designe og utføre tester på bakgrunn av funnene her. I tilfelle kompleks kode, vil en og starte med inspeksjon av koden, men her vil en fokusere på algoritmer og logikk. Da en i slike tilfeller ikke kan teste _hele_ kodebasen, vil en måtte utforme kompletthetskriterer for testene, som deretter designes og kjøres.
 
 Kompletthetskriterier
 : SOMETHING
@@ -84,7 +84,7 @@ For alle inspeksjonstyper - GIGO. Det kan og være en god idé å involvere kund
 
 ### Walkthrough
 Intern.
-Bukes for tiwdlig beslutningstaking.
+Bukes for tidlig beslutningstaking.
 
 1. Skape en grov skisse av løsningen
 	* Arkitektur, algoritme, etc.
@@ -93,7 +93,7 @@ Bukes for tiwdlig beslutningstaking.
 3. Registrering av feeback og komme med forslag til forbedringer.
 
 #### Fordeler
-Fordeler med walkthrough av koden inkluderer at den er både enkel og billig. Dette muliggjør at en kan samle ideer på et tidlig statie i utviklingen.
+Fordeler med walkthrough av koden inkluderer at den er både enkel og billig. Dette muliggjør at en kan samle ideer på et tidlig stadie i utviklingen.
 
 #### Ulemper
 Ulemper er at da prosessen er uformell er der ingen forpliktelser hos deltakerne. Prosessen skaper og mange løse og irrelevante ideer.
@@ -186,7 +186,7 @@ Etter endt inspeksjon vil dokumentets forfatter motta all loggføring av møtet.
 * Feil i annens dokument
 	* Informere dokumentets eier om mangelen
 * Misforståelse innad i inspeksjonsteamet
-	* Forbedre dokumentet for å hindre senerer misforståelser
+	* Forbedre dokumentet for å hindre senere misforståelser
 
 
 #### Kontroll av forandringer
@@ -204,7 +204,7 @@ Det er inspeksjonsleders ansvar at samtlige saker i loggen avhendes på en tilfr
 # Testprosesser
 
 ## Enhetstester
-Målet med enhetstester er å verifisere at koden fungerer som foreskrevet. Dette gjøres av utvikler én eller flere ganger i løpet av utviklingen. Enhetstesting er en uformell testmetode som utføres ved at en først implementerer (en del av) en komponent. en definerer så en eller flere tester som aktiviserer denne koden. Til sist vil en kontollere resultatet mot de forventninger og nåværende forståelse av komponenten.
+Målet med enhetstester er å verifisere at koden fungerer som foreskrevet. Dette gjøres av utvikler én eller flere ganger i løpet av utviklingen. Enhetstesting er en uformell testmetode som utføres ved at en først implementerer (en del av) en komponent. En definerer så en eller flere tester som aktiviserer denne koden. Til sist vil en kontollere resultatet mot de forventninger og nåværende forståelse av komponenten.
 
 ### Fordeler
 * Enkel måte for kontrollere at koden fungerer
@@ -215,7 +215,7 @@ Målet med enhetstester er å verifisere at koden fungerer som foreskrevet. Dett
 * Kan behøve stubber eller drivere for å kunne teste.
 
 
-## Fuksjonell verifikasjonstesting – Systemtesting
+## Funksjonell verifikasjonstesting – Systemtesting
 
 1. Basert på kravsspesifikasjoner, identifisér
 	* Tester for hver enkelt krav, inklusiv feilhåndtering
