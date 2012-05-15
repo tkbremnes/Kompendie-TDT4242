@@ -8,6 +8,7 @@ Testing kan ikke alltid gjøres – til å begynne med har en ikke kode å teste
 
 ## Fit's List
 
+
 <table>
 	<tr>
 		<td><strong>Area of competence</strong></td>
@@ -56,6 +57,7 @@ Testing kan ikke alltid gjøres – til å begynne med har en ikke kode å teste
 		<td>Fast</td>
 	</tr>
 </table>
+
 
 Et menneske er derfor bra når en behøver en evne til å håndtere varierte situasjoner, være innovativ og induktiv, samt når en vil gjenkjenne mønstre. Mennesker er på den andre siden mindre gode til å gjøre det samme om og om igjen på en konsistent måte. Dette gjør at menneskelig behanding av store datamengder ikke er å anbefale. Til slikt benytter en seg av maskiner.
 Menneske og maskin utfyller hverandre ved å utnytte hverandres styrker, ved at maskinen hjelper mennesket å håndtere store mengder informasjon, og mennesket hjelper maskinen ved å gi den innovative inndata.
@@ -125,6 +127,8 @@ Som utredet av [T. Gilb og D. Graham](http://books.google.no/books?id=GO11btO0-v
 
 
 #### Distribusjon av resusser
+
+
 <table>
 	<tr>
 		<td></td>
@@ -152,6 +156,7 @@ Som utredet av [T. Gilb og D. Graham](http://books.google.no/books?id=GO11btO0-v
 		<td>…</td>
 	</tr>
 </table>
+
 
 (TODO: Resten av slide 24 har falt bort)
 
