@@ -85,9 +85,9 @@ Metamodeller for sporbarhet av krav benyttes ofte som basis for sporbarhetsmetod
 
 Der skilles ofte mellom high-end- og low-end-sporbarhet.
 
-![European EMPRESS project: Meta model for requirements traceability]Forelesning 2/img/3.png)
+![European EMPRESS project: Meta model for requirements traceability](Forelesning 03/img/3.png)
 
-![PRECISE Meta-model (SINTEF)]Forelesning 2/img/4.png)
+![PRECISE Meta-model (SINTEF)](Forelesning 03/img/4.png)
 
 
 
