@@ -46,4 +46,5 @@ f.write(output)
 f.close
 
 %x[pandoc output.md --output Kompendie.pdf --toc]
+%x[pandoc output.md --output Kompendie.epub]
 %x[rm output.md]
