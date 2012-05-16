@@ -18,14 +18,3 @@ Installere pandoc
 Installere Ruby
 
 Kjøre `ruby build.rb`
-
-## Ferdige kapitler
-15, 12, 11, 9, 8, 6, 5 (5.2 må korrekturleses), 3(under review),
-
-
-## Gjenstår å gjøre
-* Alle kapitler
-* Build-skript som samler alle kapitler og bygger .mobi, .epub, .pdf (via LaTeX)og HTML.
-
-* 3.2
-* 8.2
