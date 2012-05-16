@@ -8,25 +8,7 @@ Testing kan ikke alltid gjøres – til å begynne med har en ikke kode å teste
 
 ## Fit's List
 
----------------------------------------------------------------------------
-*Area of competence* 	*Man* 														*Machine*
---------------------	-----														---------
-Understanding 			Good at handling variations in written material 			Bad at handling variations in written material
-
-Observe 				General observations, multifunctional 						Specialized, good at observing quantitative data, bad at pattern recognition
-
-Reasoning				Inductive, slow, imprecise but good at error correction		Deductive, fast, precise but bad error correction
-
-Memory 					Innovative, several access mechanisms 						Copying, formal access
-
-Information handling 	Single channel, less than 10 bits per second 				Multi channel, several Megabits per second
-
-Consistency 			Unreliable, get tired, depends on learning 					Consistent repetition of several actions
-
-Power 					Low level, maximum ca. 150 watt 							High level over long periods of time
-
-Speed 					Slow – seconds 												Fast
----------------------------------------------------------------------------
+![](Forelesning 05/img/3.png)
 
 Et menneske er derfor bra når en behøver en evne til å håndtere varierte situasjoner, være innovativ og induktiv, samt når en vil gjenkjenne mønstre. Mennesker er på den andre siden mindre gode til å gjøre det samme om og om igjen på en konsistent måte. Dette gjør at menneskelig behanding av store datamengder ikke er å anbefale. Til slikt benytter en seg av maskiner.
 Menneske og maskin utfyller hverandre ved å utnytte hverandres styrker, ved at maskinen hjelper mennesket å håndtere store mengder informasjon, og mennesket hjelper maskinen ved å gi den innovative inndata.
@@ -97,18 +79,7 @@ Som utredet av [T. Gilb og D. Graham](http://books.google.no/books?id=GO11btO0-v
 
 #### Distribusjon av resusser
 
----------------------------------------------------------------------------
-						*Range (%)* 	*Typisk verdi (%)*
-------					-----------		------------------
-Planning 				3-5 			4
-
-Kick-off 				4-7 			6
-
-Individual checking 	20-30			25
-
-Logging meeting			... 			...
-
----------------------------------------------------------------------------
+![](Forelesning 05/img/4.PNG)
 
 (TODO: Resten av slide 24 har falt bort)
 

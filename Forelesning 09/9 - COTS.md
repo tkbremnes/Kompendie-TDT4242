@@ -19,9 +19,9 @@ Typer meta-data er for eksempel:
 * Tilstandsdiagrammer
 * Quality of Service-informasjon
 * Pseudokode og algoritmer
-* Test-logger
+* Testlogger
 	* Hva har blitt testet?
-* Bruks-mønstre
+* Bruksmønstre
 	* Hvordan har komponenten blitt brukt til nå?
 
 Meta-data kan ta fryktelig mye plass, og er derfor en integrert del av komponenten, dog *lagret separat*. Meta-data lastes ned/inn ved nødvendighet. Integrert i komponenten, men separat fra funksjonalitet.
@@ -51,7 +51,7 @@ Gjennom å samle informasjon om bruk har vi et bredere grunnlag for å kunne fje
 
 Nøkkelord:
 
-* Run-Time Testability(RTT)
+* Run-Time Testability (RTT)
 
 Her trenger en to sett med tester:
 
@@ -90,7 +90,7 @@ En må liste opp _starttilstand_, _forutsetning_ hvor det er hensiktsmessig, _he
 Ved valg av tester er det særlig to punkter en må vurdere: _testenes kvalitet_ og _testenes størrelse_. Jo mer utfyllende test dess "bedre" er den, dessverre betyr dette også at jo mer utfyllende jo større er testen. 
 Når det gjelder testens størrelse så ønsker en at testen skal være rask å utføre, noe som legger sterkt press på å holde størrelsen nede. Løsningen på dette er å ha flere forskjellige sett med tester som utføres på ulike tidspunkt.
 
-### BIT-arkitektur(Built in test-arkitektur)
+### BIT-arkitektur (Built in test-arkitektur)
 BIT-arkitekturen består av følgende arkitektur:
 
 * Komponenten
@@ -146,7 +146,7 @@ En test har ulike roller i de ulike fasene av utviklingen. I selve utviklingen o
 
 Tillit og troverdighet er noe som må _defineres_ eksplisitt. System og mijø må óg defineres. Tillit er relatert til _produkt_ (eks. en COTS-komponent), _prosess_ (_hvordan_ komponenten ble utviklet og testet ) og _mennesker_ (_hvem_ som utviklet og testet komponenten). Dette er et eksempel på et produkttillits-mønster.
 
-Det samme gjelder tillit til prosessen. For å bygge denne tilliten er det viktig å sikre at prosessen sporbar, og prosessen og benyttes korrekt, metoden som benyttes svarer til problemet som skal løses, samt at utviklerteamet er kompetent. Dette er et eksempel på et prosesstillits-mønster.
+Det samme gjelder tillit til prosessen. For å bygge denne tilliten er det viktig å sikre at prosessen er sporbar, og prosessen og benyttes korrekt, metoden som benyttes svarer til problemet som skal løses, samt at utviklerteamet er kompetent. Dette er et eksempel på et prosesstillits-mønster.
 
 
 
@@ -177,7 +177,7 @@ Tilliten vi vil ha til komponenter vil være avhengig av hvor tilfredse vi er me
 
 
 ## Testing av COTS
-Testing av COTS skjer gjerne ved bruk av black box-testing eller domain partition testing. Anekdotiske bevis eksisterer som sier at en drar mest nytte av å fokusere på tester for _intern_ og _ekstern robusthet_. Hva en behøver for å teste disse typene robusthet, samt viktigheten av de varierer med typen komponent.
+Testing av COTS skjer gjerne ved bruk av black box-testing eller domain partition testing. Anekdotiske bevis eksisterer som sier at en drar mest nytte av å fokusere på tester for _intern_ og _ekstern robusthet_, hva en behøver for å teste disse typene robusthet, samt viktigheten av de varierer med typen komponent.
 
 Intern robusthet
 : Komponentens evne til å håndtere feil i komponenter eller miljø. For å teste dette behøver en wrappere, feilinjeksjon, m.m. Intern robusthet vil være viktigst i de komponenter som kun er synlige inne i systemets grenser.
@@ -187,7 +187,7 @@ Ekster robusthet
 
 
 ### Testing av intern robusthet
-Intern robusthet dreier seg om en komponents evne til å håndtere alle feilaktige situasjoner som f. eks. minnefeil og feilende funksjonskall. En ønsker at koden i slike tilfeller vil gå til et definert, trygt, stadie eter å ha gitt en feilmelding. Informasjonstapet etter et slikt tilfelle skal og være minimalt.
+Intern robusthet dreier seg om en komponents evne til å håndtere alle feilaktige situasjoner som f. eks. minnefeil og feilende funksjonskall. En ønsker at koden i slike tilfeller vil gå til et definert, trygt stadie etter å ha gitt en feilmelding. Informasjonstapet etter et slikt tilfelle skal og være minimalt.
 
 #### Wrapper
 
