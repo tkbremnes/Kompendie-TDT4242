@@ -2,6 +2,9 @@ preamble = "% Kompendie \n% TDT4242"
 output = preamble
 defList = "\n\n\#Definisjoner\n\n"
 
+file = File.new('README.md', "r")
+output += "\n\n" + file.read
+
 fileListString = %x[find . -name '*.md']
 fileList = fileListString.split(/\n/)
 
