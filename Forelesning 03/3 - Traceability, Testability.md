@@ -1,4 +1,4 @@
-# Sporbarhet av krav
+# 3 - Sporbarhet av krav
 Sporbarhet av krav er av Gotel og Finkelstein definert som: 
 
 > "[…] the ability to describe and follow the life of a requirement, _in both a forwards and backwards direction_, i.e. from its origins, through its development and specification, to its subsequent deployment and use, and through periods of on-going refinement and iteration in any of the phases."

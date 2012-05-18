@@ -1,3 +1,5 @@
+# 9.1 Outsourcing, subcontracting, COTS
+
 ## Ansvar
 Viktig å tenke på:
 

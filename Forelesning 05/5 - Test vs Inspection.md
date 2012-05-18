@@ -1,4 +1,4 @@
-# Test vs. inspection
+# 5.1 - Test vs. inspection
 
 Noen defekter er viktige ettersom de oppstår ofte. De fleste defekter er derimot mindre viktige, da de oppstår sjeldent. Problemet er å skille disse to tilfellene fra hverandre. Hvordan gjør en det mest effektivt og så nøyaktig som mulig?
 
