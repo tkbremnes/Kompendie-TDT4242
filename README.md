@@ -10,7 +10,7 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 ## Kontributører
 [kartoffelmos](http://kartoffelmos.net)
 [ekun](http://glittum.org)
-[aeven](http://tobe.atsomepointintime)
+[aeven](http://www.facebook.com/even.stene)
 [candygirl](https://www.facebook.com/profile.php?id=746475060)
 [Kalinikos](https://www.facebook.com/mathiamo)
 [sondref](https://www.facebook.com/sondre.frisvold)
