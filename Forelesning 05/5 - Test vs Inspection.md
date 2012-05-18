@@ -67,7 +67,6 @@ Intern.
 Som ved bruk av [walkthrough](#walkthrough) vil det ikke være en formell forpliktelse blant deltakerne. En plukker heller ikke opp potensielle prosessforbedringer.
 
 
-
 ### Formell inspeksjon
 Formell inspeksjon anbefales å være en del av den endelige akseptansetestingen av viktige dokumenter.
 
