@@ -15,9 +15,10 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 [Kalinikos](https://www.facebook.com/mathiamo) & 
 [perry](https://www.facebook.com/alexander.perry)
 
-## Moralsupport
-[sondref](https://www.facebook.com/sondre.frisvold) &
-[kamuflars](https://www.facebook.com/lars.brovold)
+## <del>Moralsk støtte</del> Leeches
+[sondref](https://www.facebook.com/sondre.frisvold),
+[kamuflars](https://www.facebook.com/lars.brovold) &
+[njaal](https://www.facebook.com/njaal.gjerde) (we see you!)
 
 ## For å bygge
 How to?
