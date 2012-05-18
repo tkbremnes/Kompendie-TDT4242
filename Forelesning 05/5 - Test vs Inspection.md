@@ -27,7 +27,7 @@ For eksekvérbar kode kan en benytte seg av inspeksjon, testing eller en kombina
 En generell regel er at om en står overfor en tilstrekkelig liten kodebase vil en kunne utføre inspeksjon av hele denne basen, for så å designe og utføre tester på bakgrunn av funnene her. I tilfelle kompleks kode, vil en og starte med inspeksjon av koden, men her vil en fokusere på algoritmer og logikk. Da en i slike tilfeller ikke kan teste _hele_ kodebasen, vil en måtte utforme kompletthetskriterer for testene, som deretter designes og kjøres.
 
 Kompletthetskriterier
-: SOMETHING
+: Et sett med kriterier som må oppfylles for at testen skal være komplett.
 
 
 

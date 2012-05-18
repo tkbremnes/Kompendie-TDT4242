@@ -6,7 +6,8 @@ file = File.new('README.md', "r")
 output += "\n\n" + file.read
 
 fileListString = %x[find . -name '*.md']
-fileList = fileListString.split(/\n/)
+fileList = fileListString.split(/\n/).sort
+
 
 fileList.each do |filename|
 	# fname = filename.chomp!
