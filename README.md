@@ -12,10 +12,12 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 [ekun](http://glittum.org), 
 [aeven](http://tobe.atsomepointintime), 
 [candygirl](https://www.facebook.com/profile.php?id=746475060), 
-[Kalinikos](https://www.facebook.com/mathiamo), 
-[sondref](https://www.facebook.com/sondre.frisvold), 
-[kamuflars](https://www.facebook.com/lars.brovold) & 
+[Kalinikos](https://www.facebook.com/mathiamo) & 
 [perry](https://www.facebook.com/alexander.perry)
+
+## Moralsupport
+[sondref](https://www.facebook.com/sondre.frisvold) &
+[kamuflars](https://www.facebook.com/lars.brovold)
 
 ## For å bygge
 How to?
