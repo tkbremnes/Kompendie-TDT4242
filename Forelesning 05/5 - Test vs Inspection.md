@@ -67,7 +67,6 @@ Intern.
 Som ved bruk av [walkthrough](#walkthrough) vil det ikke være en formell forpliktelse blant deltakerne. En plukker heller ikke opp potensielle prosessforbedringer.
 
 
-
 ### Formell inspeksjon
 Formell inspeksjon anbefales å være en del av den endelige akseptansetestingen av viktige dokumenter.
 
@@ -129,7 +128,7 @@ Det er inspeksjonsleders ansvar at samtlige saker i loggen avhendes på en tilfr
 * Behøver ekstensiv planlegging for å være vellykket
 
 
-# Testprosesser
+# 5.1 - Testprosesser
 
 ## Enhetstester
 Målet med enhetstester er å verifisere at koden fungerer som foreskrevet. Dette gjøres av utvikler én eller flere ganger i løpet av utviklingen. Enhetstesting er en uformell testmetode som utføres ved at en først implementerer (en del av) en komponent. En definerer så en eller flere tester som aktiviserer denne koden. Til sist vil en kontollere resultatet mot de forventninger og nåværende forståelse av komponenten.

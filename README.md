@@ -13,6 +13,8 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 [aeven](http://tobe.atsomepointintime)
 
 ## For å bygge
+Must have tilgang til UNIX kommandoer!
+
 Installere pandoc
 
 Installere Ruby
