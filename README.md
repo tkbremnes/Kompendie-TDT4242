@@ -11,12 +11,10 @@ Diskusjoner skjer på IRC - #etkultnavn på freenode.
 [kartoffelmos](http://kartoffelmos.net)
 [ekun](http://glittum.org)
 [aeven](http://tobe.atsomepointintime)
+[candygirl](https://www.facebook.com/profile.php?id=746475060)
+[Kalinikos](https://www.facebook.com/mathiamo)
+[sondref](https://www.facebook.com/sondre.frisvold)
+[kamuflars](https://www.facebook.com/lars.brovold)
 
 ## For å bygge
-Must have tilgang til UNIX kommandoer!
-
-Installere pandoc
-
-Installere Ruby
-
-Kjøre `ruby build.rb`
+How to?
